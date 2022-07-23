@@ -1,0 +1,2 @@
+
+global._scrvar_ = {}
