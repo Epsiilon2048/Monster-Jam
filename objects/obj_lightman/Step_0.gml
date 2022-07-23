@@ -27,7 +27,7 @@ with(obj_tri){
 	Quad(_vb, x, y+sprite_height, mid_x, mid_y) //small diagonal wall
 }
 with(obj_robo){
-	//Quad(_vb, bbox_left+1, bbox_bottom, bbox_right-1, bbox_bottom)
+	Quad(_vb, bbox_left+1, bbox_bottom+1, bbox_right, bbox_bottom+1)
 }
 vertex_end(vb)
 

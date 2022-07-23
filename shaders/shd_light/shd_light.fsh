@@ -23,12 +23,9 @@ void main(){
 	//vec4 frag = texture2D( gm_BaseTexture, v_vTexcoord );
 	vec4 mask = texture2D( u_mask, v_vTexcoord );
 	
-	vec2 mask_pos = pos;
-	mask_pos.y = mask.y; // lazy way of saying game_height
-
-	if (mask.y > 0.0 && mask_pos.y > (u_pos.y/180.0))
+	if (mask.a > 0.0 && mask.y > u_pos.y/180.0)
 	{
-		gl_FragColor = vec4(0.0, 0.0, 0.0, 0.0);
+		gl_FragColor = vec4(0.0, 0.0, 0.0, 1.0);
 	}
 	else
 	{

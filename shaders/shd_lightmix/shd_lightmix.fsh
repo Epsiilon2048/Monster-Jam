@@ -18,11 +18,13 @@ void main()
 	if (mask.a > 0.0)
 	{
 		emission = mask.r;
-		pos.y = pixel_y; // lazy way of saying game_height
+		pos.y = pixel_y + 1.0/180.0;
 	}
 	
 	vec4 light = texture2D( u_light, pos );
 	vec4 base = texture2D( gm_BaseTexture, v_vTexcoord );
 	
-   gl_FragColor = mix(base*light + base*light, base, emission);
+   gl_FragColor = mix(base*light, base, emission);
+   
+   
 }

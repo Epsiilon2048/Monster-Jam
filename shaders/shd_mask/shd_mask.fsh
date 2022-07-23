@@ -9,8 +9,6 @@ void main()
 {
     vec4 frag = v_vColour * texture2D( gm_BaseTexture, v_vTexcoord );
 	
-	frag.a += 0.01;
-	
 	float emission = 0.0;
 	if (frag.a > 0.0 && frag.rgb == u_emission.rgb)
 	{

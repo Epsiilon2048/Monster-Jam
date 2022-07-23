@@ -29,7 +29,12 @@ surface_set_target(mask_surface)
 draw_clear_alpha(c_black, 0)
 shader_set(shd_mask)
 with(obj_robo){
-	shauni("u_y", (y-_vy)/game_height)
+	shauni("u_y", y/game_height)
+	shauni_color("u_emission", emission_color, 1, true)
+	draw_self()	
+}
+with(obj_scanner){
+	shauni("u_y", y/game_height)
 	shauni_color("u_emission", emission_color, 1, true)
 	draw_self()	
 }
@@ -59,9 +64,8 @@ with(obj_light){
 	
 	shauni("reflection", obj_lightset.reflection)
 	shauni("diffusion", obj_lightset.diffusion)
-	shauni("light_steps", obj_lightset.light_steps)
 	
-	shauni_surface("u_nmap", obj_lightman.normal_surface)
+	//shauni_surface("u_nmap", obj_lightman.normal_surface)
 	shauni_surface("u_mask", obj_lightman.mask_surface)
 	//draw_rectangle_color(_vx, _vy, _vx+320, _vy+180, color, color, color, color, 0) //canvas for drawing the light
 	draw_surface_ext(application_surface, _vx, _vy, 1, 1, 0, color, 1)
