@@ -29,20 +29,23 @@ with(obj_tri){
 with(obj_robo){
 	Quad(_vb, bbox_left+1, bbox_bottom+1, bbox_right, bbox_bottom+1)
 }
+//with(obj_scanner){  // Blocks own light! 
+//	Quad(_vb, bbox_left, bbox_top, bbox_right, bbox_bottom) //Negative Slope Diagonal Wall
+//	Quad(_vb, bbox_left, bbox_bottom, bbox_right, bbox_top) //Positive Slope Diagonal Wall
+//}
 vertex_end(vb)
 
 
 //view movement controls
-vy += (keyboard_check(vk_down)-keyboard_check(vk_up))*4 
-vx += (keyboard_check(vk_right)-keyboard_check(vk_left))*4 
-camera_set_view_pos(view_camera[0], vx, vy)
+vy = camera_get_view_y(view_camera[0])
+vx = camera_get_view_x(view_camera[0])
 global.vx = vx
 global.vy = vy
 
 
 
 //add lights by left clicking. For testing purposes
-if (mouse_check_button_pressed(mb_left)){
+if (mouse_check_button_pressed(mb_middle)){
 		instance_create_depth(mouse_x, mouse_y, depth, obj_light)	
 }
 

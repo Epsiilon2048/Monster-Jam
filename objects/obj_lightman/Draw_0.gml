@@ -16,26 +16,28 @@ if not surface_exists(mask_surface)
 matrix_set(matrix_world, matrix_build(-vx, -vy, 0, 0, 0, 0, 1, 1, 1))
 
 //Draw Normal
-surface_set_target(normal_surface)
-shader_set(shd_norm_neutral)
-with(obj_robo){
-	draw_self()	
-}
-shader_reset()
-surface_reset_target()
+//surface_set_target(normal_surface)
+//shader_set(shd_norm_neutral)
+//with(obj_robo){
+//	draw_self()	
+//}
+//shader_reset()
+//surface_reset_target()
 
 //Draw vertical mask
 surface_set_target(mask_surface)
 draw_clear_alpha(c_black, 0)
 shader_set(shd_mask)
 with(obj_robo){
-	shauni("u_y", y/game_height)
-	shauni_color("u_emission", emission_color, 1, true)
+	shauni("u_y", (y-_vy)/game_height)
+	shauni_color("u_emission_color", emission_color, 1, true)
+	shauni("u_emission_add", player_local ? 0.05 : 0)
 	draw_self()	
 }
 with(obj_scanner){
-	shauni("u_y", y/game_height)
-	shauni_color("u_emission", emission_color, 1, true)
+	shauni("u_y", (y-_vy)/game_height)
+	shauni_color("u_emission_color", emission_color, 1, true)
+	shauni("u_emission_add", 0)
 	draw_self()	
 }
 shader_reset()
@@ -78,9 +80,9 @@ matrix_set(matrix_world, matrix_build(0, 0, 0, 0, 0, 0, 1, 1, 1))
 //gpu_set_blendmode_ext(bm_dest_alpha, bm_inv_dest_alpha)
 gpu_set_blendmode(bm_normal)
 
-shader_set(shd_lightmix)
-shauni_surface("u_light", light_surface)
-shauni_surface("u_mask", mask_surface)
-draw_surface(application_surface, vx, vy)
-shader_reset()
-gpu_set_blendmode(bm_normal)
+//shader_set(shd_lightmix)
+//shauni_surface("u_light", light_surface)
+//shauni_surface("u_mask", mask_surface)
+//draw_surface(application_surface, vx, vy)
+//shader_reset()
+//gpu_set_blendmode(bm_normal)

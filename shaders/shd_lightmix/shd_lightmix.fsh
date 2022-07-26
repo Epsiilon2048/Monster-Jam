@@ -25,6 +25,4 @@ void main()
 	vec4 base = texture2D( gm_BaseTexture, v_vTexcoord );
 	
    gl_FragColor = mix(base*light, base, emission);
-   
-   
 }

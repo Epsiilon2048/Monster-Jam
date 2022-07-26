@@ -1,8 +1,8 @@
 {
   "type": 1,
   "parent": {
-    "name": "Shaders",
-    "path": "folders/Lighting system/Shaders.yy",
+    "name": "Lighting",
+    "path": "folders/Lighting.yy",
   },
   "resourceVersion": "1.0",
   "name": "shd_light",
