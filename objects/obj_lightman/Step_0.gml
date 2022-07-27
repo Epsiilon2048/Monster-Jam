@@ -29,6 +29,11 @@ with(obj_tri){
 with(obj_robo){
 	Quad(_vb, bbox_left+1, bbox_bottom+1, bbox_right, bbox_bottom+1)
 }
+with(obj_cat){
+	Quad(_vb, bbox_left+1, bbox_bottom+1, bbox_right, bbox_bottom+1)
+	Quad(_vb, bbox_left, bbox_top, bbox_right, bbox_bottom) //Negative Slope Diagonal Wall
+	Quad(_vb, bbox_left, bbox_bottom, bbox_right, bbox_top) //Positive Slope Diagonal Wall
+}
 //with(obj_scanner){  // Blocks own light! 
 //	Quad(_vb, bbox_left, bbox_top, bbox_right, bbox_bottom) //Negative Slope Diagonal Wall
 //	Quad(_vb, bbox_left, bbox_bottom, bbox_right, bbox_top) //Positive Slope Diagonal Wall

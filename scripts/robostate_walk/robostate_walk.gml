@@ -1,21 +1,21 @@
 
-function robostate_walk_initialize(robo=self){ with robo {
+function robostate_walk_initialize(robo){ with robo {
 
-sprite_index = spr_greenman_walk
+sprite_index = spr_robo_green_walk
 }}
 
 
-function robostate_walk_input(robo=self){ with robo {
+function robostate_walk_input(robo){ with robo {
 
 robo_get_input()
 }}
 
 
-function robostate_walk_step(robo=self){ with robo {
+function robostate_walk_step(robo){ with robo {
 
 if not input.move
 {
-	robo_switch_state(, obj_roboman.state_stand)
+	robo_switch_state(obj_roboman.state_stand)
 	exit
 }
 

@@ -12,6 +12,8 @@ if not surface_exists(mask_surface)
 	mask_surface = surface_create(320, 180)
 }
 
+sort_instance_depths()
+draw_depth_instances()
 
 matrix_set(matrix_world, matrix_build(-vx, -vy, 0, 0, 0, 0, 1, 1, 1))
 
@@ -28,18 +30,7 @@ matrix_set(matrix_world, matrix_build(-vx, -vy, 0, 0, 0, 0, 1, 1, 1))
 surface_set_target(mask_surface)
 draw_clear_alpha(c_black, 0)
 shader_set(shd_mask)
-with(obj_robo){
-	shauni("u_y", (y-_vy)/game_height)
-	shauni_color("u_emission_color", emission_color, 1, true)
-	shauni("u_emission_add", player_local ? 0.05 : 0)
-	draw_self()	
-}
-with(obj_scanner){
-	shauni("u_y", (y-_vy)/game_height)
-	shauni_color("u_emission_color", emission_color, 1, true)
-	shauni("u_emission_add", 0)
-	draw_self()	
-}
+draw_depth_instances(mask_before_script)
 shader_reset()
 surface_reset_target()
 

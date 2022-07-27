@@ -31,7 +31,7 @@ void main(){
 	{
 		vec2 dis = pos - u_pos;
 		
-		float str = 1.0/(sqrt(dis.x*dis.x + dis.y*dis.y + zz*zz)-zz+1.0-u_str); //strength of light is the inverse distance
+		float str = 1.0/(sqrt(dis.x*dis.x + dis.y*dis.y + zz*zz)-zz+1.0-u_str) - 0.04; //strength of light is the inverse distance
 		
 		//float str = sqrt(dis.x*dis.x + dis.y*dis.y + zz*zz);
 		//str = str - step_dist*steps;

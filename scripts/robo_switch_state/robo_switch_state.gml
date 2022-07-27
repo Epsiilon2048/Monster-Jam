@@ -1,6 +1,6 @@
 
-function robo_switch_state(robo=self, newstate){
+function robo_switch_state(newstate){
 
 state = newstate
-state.initialize(robo)
+state.initialize(self)
 }

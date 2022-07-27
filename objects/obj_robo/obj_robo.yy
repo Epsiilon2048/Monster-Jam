@@ -1,10 +1,10 @@
 {
   "spriteId": {
-    "name": "spr_greenman",
-    "path": "sprites/spr_greenman/spr_greenman.yy",
+    "name": "spr_robo_green",
+    "path": "sprites/spr_robo_green/spr_robo_green.yy",
   },
   "solid": false,
-  "visible": true,
+  "visible": false,
   "managed": true,
   "spriteMaskId": null,
   "persistent": false,

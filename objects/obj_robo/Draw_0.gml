@@ -7,7 +7,7 @@ var text = ""
 
 if obj_roboman.draw_player_id
 {
-	text += " / "+string(player_id)
+	text += " / "+string(player.player_id)
 }
 
 if obj_roboman.draw_state

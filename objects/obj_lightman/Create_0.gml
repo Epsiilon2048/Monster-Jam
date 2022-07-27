@@ -9,19 +9,15 @@ application_surface_draw_enable(false)
 vx = 0
 vy = 0
 
-//Vertex format and buffer setup
 vertex_format_begin()
 vertex_format_add_position_3d()
 vf = vertex_format_end()
 vb = vertex_create_buffer()
 
-//shadow surface variable declaration
 light_surface = -1
-
 mask_surface = -1
 
 
-//Background layer functions
 function BGbegin(){
 	gpu_set_colorwriteenable(1, 1, 1, 0)
 }
@@ -63,3 +59,10 @@ layer_script_end(_n_layer, layer_normal_end)
 draw_light_surface = false
 draw_normal_surface = false
 draw_mask_surface = false
+
+depth_list = ds_grid_create(2, 1)
+depth_objects = [
+	obj_robo,
+	obj_cat,
+	obj_scanner,
+]
