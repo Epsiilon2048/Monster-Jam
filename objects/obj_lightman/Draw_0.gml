@@ -13,7 +13,6 @@ if not surface_exists(mask_surface)
 }
 
 sort_instance_depths()
-draw_depth_instances()
 
 matrix_set(matrix_world, matrix_build(-vx, -vy, 0, 0, 0, 0, 1, 1, 1))
 
@@ -70,6 +69,12 @@ matrix_set(matrix_world, matrix_build(0, 0, 0, 0, 0, 0, 1, 1, 1))
 //Draw and blend the shadow surface to the application surface
 //gpu_set_blendmode_ext(bm_dest_alpha, bm_inv_dest_alpha)
 gpu_set_blendmode(bm_normal)
+
+//shader_set(shd_light_hide)
+//shauni_surface("u_light", light_surface)
+//shauni_surface("u_mask", mask_surface)
+draw_depth_instances()
+//shader_reset()
 
 //shader_set(shd_lightmix)
 //shauni_surface("u_light", light_surface)

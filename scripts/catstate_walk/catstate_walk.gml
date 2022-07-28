@@ -1,7 +1,7 @@
 
 function catstate_walk_initialize(){ with obj_cat {
 
-sprite_index = spr_cat
+sprite_index = spr_cat_walk
 }}
 
 

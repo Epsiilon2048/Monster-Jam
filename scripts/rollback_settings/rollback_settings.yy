@@ -2,11 +2,11 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "Scripts",
-    "path": "folders/Scripts.yy",
+    "name": "monster",
+    "path": "monster.yyp",
   },
   "resourceVersion": "1.0",
-  "name": "sort_instance_depths",
+  "name": "rollback_settings",
   "tags": [],
   "resourceType": "GMScript",
 }
