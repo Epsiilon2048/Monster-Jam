@@ -44,40 +44,44 @@ draw_clear_alpha(c_black, 0)
 gpu_set_ztestenable(true)
 gpu_set_zwriteenable(true)
 var z = 0
-//draw_surface_ext(application_surface, _vx, _vy, 1, 1, 0, obj_lightset.shadow_color, obj_lightset.ambient_intensity)
-with(obj_light){
+
+var l = obj_light
+repeat 2
+{
+	with(l){
+		//Draw the shadows (AKA light blockers)
+		if shadows
+		{
+			gpu_set_blendmode(bm_normal)
+			shader_set(shd_shadow)
+			shauni("u_pos", x, y)
+			shauni("u_z", z)
+			vertex_submit(_vb, pr_trianglelist, -1)
+		}
 	
-	//Draw the shadows (AKA light blockers)
-	if shadows
-	{
-		gpu_set_blendmode(bm_normal)
-		shader_set(shd_shadow)
+		//Draw the Light
+		gpu_set_blendmode(bm_add)
+		//gpu_set_blendmode_ext_sepalpha(bm_inv_dest_alpha, bm_one, bm_zero, bm_zero)
+		shader_set(shd_light)
+		shauni_color("u_color", color, , true)
 		shauni("u_pos", x, y)
 		shauni("u_z", z)
-		vertex_submit(_vb, pr_trianglelist, -1)
+		shauni("zz", size)
+		shauni("u_str", str)
+		shauni("u_fov", fov)
+		shauni("u_dir", dir)
+	
+		shauni("reflection", obj_lightset.reflection)
+		shauni("diffusion", obj_lightset.diffusion)
+	
+		//shauni_surface("u_nmap", obj_lightman.normal_surface)
+		shauni_surface("u_mask", obj_lightman.mask_surface)
+		//draw_rectangle_color(_vx, _vy, _vx+320, _vy+180, color, color, color, color, 0) //canvas for drawing the light
+		draw_surface_ext(obj_lightman.light_surface, _vx, _vy, 1, 1, 0, c_white, 1)
+	
+		z --
 	}
-	
-	//Draw the Light
-	gpu_set_blendmode(bm_add)
-	//gpu_set_blendmode_ext_sepalpha(bm_inv_dest_alpha, bm_one, bm_zero, bm_zero)
-	shader_set(shd_light)
-	shauni_color("u_color", color, , true)
-	shauni("u_pos", x, y)
-	shauni("u_z", z)
-	shauni("zz", size)
-	shauni("u_str", str)
-	shauni("u_fov", fov)
-	shauni("u_dir", dir)
-	
-	shauni("reflection", obj_lightset.reflection)
-	shauni("diffusion", obj_lightset.diffusion)
-	
-	//shauni_surface("u_nmap", obj_lightman.normal_surface)
-	shauni_surface("u_mask", obj_lightman.mask_surface)
-	//draw_rectangle_color(_vx, _vy, _vx+320, _vy+180, color, color, color, color, 0) //canvas for drawing the light
-	draw_surface_ext(obj_lightman.light_surface, _vx, _vy, 1, 1, 0, c_white, 1)
-	
-	z --
+	l = obj_locallight
 }
 gpu_set_ztestenable(false)
 gpu_set_zwriteenable(false)
@@ -93,6 +97,7 @@ surface_reset_target()
 matrix_set(matrix_world, matrix_build(0, 0, 0, 0, 0, 0, 1, 1, 1))
 
 shader_set(shd_lighthide)
+shauni("u_base_boost", obj_lightset.character_boost)
 shauni_surface("u_light", light_surface)
 shauni_surface("u_mask", mask_surface)
 draw_surface(depth_surface, vx, vy)

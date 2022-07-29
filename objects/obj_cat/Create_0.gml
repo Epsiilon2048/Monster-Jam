@@ -12,4 +12,6 @@ if player.player_local
 	camera_set_following()
 }
 
+catvision = true
+
 cat_get_input()

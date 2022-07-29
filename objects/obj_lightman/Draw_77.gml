@@ -1,7 +1,7 @@
 
 //gpu_set_blendmode_ext(bm_one, bm_zero);
 shader_set(shd_lightmix)
-shauni("u_ambient_intensity", obj_lightset.ambient_intensity)
+shauni("u_ambient_intensity", obj_lightset.ambient_intensity+cat_is_local*obj_lightset.cat_ambient)
 shauni_surface("u_light", light_surface)
 shauni_surface("u_mask", mask_surface)
 shauni("u_texel", 1/game_width, 1/game_height)

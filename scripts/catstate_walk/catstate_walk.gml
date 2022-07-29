@@ -13,6 +13,8 @@ cat_get_input()
 
 function catstate_walk_step(){ with obj_cat {
 
+cat_check_catvision()
+
 if not input.move
 {
 	cat_switch_state(obj_catman.state_stand)

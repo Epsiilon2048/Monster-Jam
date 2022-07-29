@@ -17,7 +17,7 @@ if player.player_local
 }
 
 light = instance_create_layer(x, y, "Lights", obj_light, {
-	color: 0x00D7FF,
+	color: hex_to_color(0xfff1bf),
 	size: 350,
 	str: 0,
 	fov: obj_roboman.LIGHT_FOV,

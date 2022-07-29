@@ -36,7 +36,7 @@ void main()
 	vec4 base = texture2D( gm_BaseTexture, v_vTexcoord );
 	vec4 light = texture2D( u_light, pos );
 
-	vec3 color = mix(base.rgb*light.rgb*4.0, base.rgb, clamp(emission+u_ambient_intensity, 0.0, 1.0));
+	vec3 color = mix(base.rgb*light.rgb*2.5, base.rgb, clamp(emission+u_ambient_intensity, 0.0, 1.0));
 	
 	//if (mask.b > 0.0 && light.a > 0.01)
 	//{
