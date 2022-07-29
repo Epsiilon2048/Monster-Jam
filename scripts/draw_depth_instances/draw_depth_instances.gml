@@ -15,11 +15,13 @@ for(var i = 0; i <= ds_grid_height(depth_list)-1; i++)
 
 function mask_before_script(){
 
-var local = (object_index == obj_robo or object_index == obj_cat) and player.player_local
+var local = (object_index == obj_robo or object_index == obj_cat) and instance_exists(player) and player.player_local
 	
 shauni("u_y", (y-camera_get_view_y(view_camera[0]))/game_height)
 shauni_color("u_emission_color", emission_color, 1, true)
 shauni("u_emission_add", local ? 0.07 : 0)
+var tex = sprite_get_texture(sprite_index, image_index)
+shauni("u_texel", texture_get_texel_width(tex), texture_get_texel_height(tex))
 }
 
 

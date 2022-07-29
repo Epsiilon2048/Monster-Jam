@@ -21,29 +21,28 @@ uniform float steps;
 
 void main(){
 	
-	vec4 frag = vec4(0.0);//texture2D( gm_BaseTexture, v_vTexcoord );
 	vec4 mask = texture2D( u_mask, v_vTexcoord );
 	
+	vec2 dis = pos - u_pos;
+		
+	float str = 1.0/(sqrt(dis.x*dis.x + dis.y*dis.y + zz*zz)-zz+1.0-u_str) - 0.04; //strength of light is the inverse distance
+		
+	float dir = radians(u_dir);
+	float hfov = radians(u_fov)*0.5;
+	
+	if (hfov < PI){
+		float rad = atan(-dis.y,dis.x);	
+		float adis = abs(mod(rad+2.0*PI,2.0*PI) - dir);
+		adis = min(adis, 2.0*PI - adis);
+		str *= clamp((1.0-adis/hfov)*diffusion,0.0,1.0);
+	}
+		
 	if (mask.a > 0.0 && mask.y > u_pos.y/180.0)
 	{
-		gl_FragColor = frag;
+		gl_FragColor = vec4(vec3(u_color*mask.b), str + (str*mask.b*50.0));
 	}
 	else
 	{
-		vec2 dis = pos - u_pos;
-		
-		float str = 1.0/(sqrt(dis.x*dis.x + dis.y*dis.y + zz*zz)-zz+1.0-u_str) - 0.04; //strength of light is the inverse distance
-		
-		float dir = radians(u_dir);
-		float hfov = radians(u_fov)*0.5;
-	
-		if (hfov < PI){
-			float rad = atan(-dis.y,dis.x);	
-			float adis = abs(mod(rad+2.0*PI,2.0*PI) - dir);
-			adis = min(adis, 2.0*PI - adis);
-			str *= clamp((1.0-adis/hfov)*diffusion,0.0,1.0);
-		}
-		
-		gl_FragColor = frag+vec4(u_color, str);
+		gl_FragColor = vec4(u_color, str);
 	}
 }

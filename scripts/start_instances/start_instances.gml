@@ -11,6 +11,7 @@ create(obj_lightman)
 
 //create(o_console)
 create(obj_debug)
+create(obj_cursor)
 
 create(obj_lightset)
 }

@@ -4,6 +4,7 @@ shader_set(shd_lightmix)
 shauni("u_ambient_intensity", obj_lightset.ambient_intensity)
 shauni_surface("u_light", light_surface)
 shauni_surface("u_mask", mask_surface)
+shauni("u_texel", 1/game_width, 1/game_height)
 draw_surface_ext(application_surface,0,0,4,4,0,c_white,1);
 shader_reset()
 gpu_set_blendmode(bm_normal);

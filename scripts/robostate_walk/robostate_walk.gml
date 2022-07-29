@@ -13,6 +13,8 @@ robo_get_input()
 
 function robostate_walk_step(robo){ with robo {
 
+robo_check_flashlight()
+
 if not input.move
 {
 	robo_switch_state(obj_roboman.state_stand)

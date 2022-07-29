@@ -1,5 +1,24 @@
 
-emission_color = 0x0000FF
+if not rollback_game_running exit
 
 direction += SPD
-dir = direction
+light.dir = direction
+
+light.x = x+lengthdir_x(2, direction)
+light.y = y+lengthdir_y(2, direction)
+
+var x2 = x+lengthdir_x(SIGNAL_RANGE, light.dir-light.fov/2)
+var y2 = y+lengthdir_y(SIGNAL_RANGE, light.dir-light.fov/2)
+					 
+var x3 = x+lengthdir_x(SIGNAL_RANGE, light.dir+light.fov/2)
+var y3 = y+lengthdir_y(SIGNAL_RANGE, light.dir+light.fov/2)
+
+if not signal and 
+	(
+	instance_exists(collision_line(x, y, x2, y2, obj_cat, true, true)) or
+	instance_exists(collision_line(x, y, x3, y3, obj_cat, true, true))
+	)
+{
+	sprite_index = spr_scannerwave
+	signal = true
+}
