@@ -17,7 +17,7 @@ if player.player_local
 
 light = instance_create_layer(x, y, "Lights", obj_light, {
 	color: 0x00D7FF,
-	size: 200,
+	size: 500,
 	str: 0,
 	fov: 120,
 	parent: self,

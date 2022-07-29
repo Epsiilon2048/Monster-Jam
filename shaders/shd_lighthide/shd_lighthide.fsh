@@ -17,12 +17,14 @@ void main()
 	
 	if (mask.a > 0.0)
 	{
-		emission = mask.r;
+		emission = ceil(mask.r);
 		pos.y = pixel_y + 1.0/180.0;
 	}
 	
-	vec4 light = texture2D( u_light, pos );
+	vec4 light = texture2D( u_light, v_vTexcoord);
+	vec4 light_mask = texture2D( u_light, pos);
+	
 	vec4 base = texture2D( gm_BaseTexture, v_vTexcoord );
 	
-	gl_FragColor = vec4(base.rgb, light.r+light.g+light.b+emission);
+	gl_FragColor = vec4(base.rgb, base.a*(ceil(light_mask.a+light.a)+emission));
 }

@@ -4,6 +4,7 @@
 varying vec2 v_vTexcoord;
 varying vec4 v_vColour;
 
+uniform float u_ambient_intensity;
 uniform sampler2D u_light;
 uniform sampler2D u_mask;
 
@@ -23,6 +24,8 @@ void main()
 	
 	vec4 light = texture2D( u_light, pos );
 	vec4 base = texture2D( gm_BaseTexture, v_vTexcoord );
-	
-   gl_FragColor = mix(base*light, base, emission);
+
+	vec3 color = mix(base.rgb*light.rgb, base.rgb, emission+u_ambient_intensity);
+
+	gl_FragColor = vec4(color, 1.0);
 }

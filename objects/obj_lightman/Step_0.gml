@@ -2,14 +2,14 @@
 //Z coordinate is used as a flag to determine if the vertex will be repositioned in the shader
 function Quad(_vb, _x1, _y1, _x2, _y2){
 	//Upper triangle
-	vertex_position_3d(_vb, _x1, _y1, 0)
-	vertex_position_3d(_vb, _x1, _y1, 2) //repositioned vertex
-	vertex_position_3d(_vb, _x2, _y2, 1)
+	vertex_position_3d(_vb, _x1, _y1, 0)//0)
+	vertex_position_3d(_vb, _x1, _y1, 1)//2) //repositioned vertex
+	vertex_position_3d(_vb, _x2, _y2, 0)//1)
 	
 	//Lower Triangle
-	vertex_position_3d(_vb, _x1, _y1, 2) //repositioned vertex
-	vertex_position_3d(_vb, _x2, _y2, 1)
-	vertex_position_3d(_vb, _x2, _y2, 3) //repositioned vertex
+	vertex_position_3d(_vb, _x1, _y1, 1)//2) //repositioned vertex
+	vertex_position_3d(_vb, _x2, _y2, 0)//1)
+	vertex_position_3d(_vb, _x2, _y2, 1)//3) //repositioned vertex
 }
 
 
@@ -31,8 +31,8 @@ with(obj_robo){
 }
 with(obj_cat){
 	Quad(_vb, bbox_left+1, bbox_bottom+1, bbox_right, bbox_bottom+1)
-	Quad(_vb, bbox_left, bbox_top, bbox_right, bbox_bottom) //Negative Slope Diagonal Wall
-	Quad(_vb, bbox_left, bbox_bottom, bbox_right, bbox_top) //Positive Slope Diagonal Wall
+	Quad(_vb, bbox_left+1, bbox_top, bbox_right, bbox_bottom+1) //Negative Slope Diagonal Wall
+	Quad(_vb, bbox_left+1, bbox_bottom+1, bbox_right, bbox_top) //Positive Slope Diagonal Wall
 }
 //with(obj_scanner){  // Blocks own light! 
 //	Quad(_vb, bbox_left, bbox_top, bbox_right, bbox_bottom) //Negative Slope Diagonal Wall

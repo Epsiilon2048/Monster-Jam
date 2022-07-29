@@ -21,12 +21,12 @@ uniform float steps;
 
 void main(){
 	
-	vec4 frag = vec4(0.0);//texture2D( gm_BaseTexture, v_vTexcoord );
+	//vec4 frag = texture2D( gm_BaseTexture, v_vTexcoord );
 	vec4 mask = texture2D( u_mask, v_vTexcoord );
 	
 	if (mask.a > 0.0 && mask.y > u_pos.y/180.0)
 	{
-		gl_FragColor = frag;
+		gl_FragColor = vec4(0.0, 0.0, 0.0, 1.0);
 	}
 	else
 	{
@@ -34,16 +34,30 @@ void main(){
 		
 		float str = 1.0/(sqrt(dis.x*dis.x + dis.y*dis.y + zz*zz)-zz+1.0-u_str) - 0.04; //strength of light is the inverse distance
 		
+		//float str = sqrt(dis.x*dis.x + dis.y*dis.y + zz*zz);
+		//str = str - step_dist*steps;
+	
 		float dir = radians(u_dir);
 		float hfov = radians(u_fov)*0.5;
 	
+		//setup FOV
 		if (hfov < PI){
 			float rad = atan(-dis.y,dis.x);	
 			float adis = abs(mod(rad+2.0*PI,2.0*PI) - dir);
 			adis = min(adis, 2.0*PI - adis);
 			str *= clamp((1.0-adis/hfov)*diffusion,0.0,1.0);
 		}
+	
+		//diffuse and specular lighting from normal map
+		//vec3 norm = normalize(texture2D( u_nmap, v_vTexcoord ).rgb -0.5);
+		//vec3 lnorm = normalize(vec3(-dis.x,dis.y,32.));
+		//float norm_str = dot(norm,lnorm);
+		//float ref = pow(max(reflect(-lnorm,norm).z,0.),reflection);
+	
+		//float final = str*norm_str;
+	
+		//gl_FragColor = col*vec4(vec3(final),1.0) + ref*col*str;
 		
-		gl_FragColor = frag+vec4(u_color, str);
+		gl_FragColor = vec4(u_color, str);
 	}
 }

@@ -21,9 +21,9 @@
   "eventList": [],
   "properties": [
     {"varType":7,"value":"$FFFFFFFF","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"shadow_color","tags":[],"resourceType":"GMObjectProperty",},
-    {"varType":0,"value":"0.3","rangeEnabled":true,"rangeMin":0.0,"rangeMax":1.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"ambient_intensity","tags":[],"resourceType":"GMObjectProperty",},
+    {"varType":0,"value":"0.02","rangeEnabled":true,"rangeMin":0.0,"rangeMax":1.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"ambient_intensity","tags":[],"resourceType":"GMObjectProperty",},
     {"varType":0,"value":"10","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"reflection","tags":[],"resourceType":"GMObjectProperty",},
-    {"varType":0,"value":"7","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"diffusion","tags":[],"resourceType":"GMObjectProperty",},
+    {"varType":0,"value":"10000","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"diffusion","tags":[],"resourceType":"GMObjectProperty",},
     {"varType":0,"value":"30","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"light_step_distance","tags":[],"resourceType":"GMObjectProperty",},
     {"varType":0,"value":"3","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"light_steps","tags":[],"resourceType":"GMObjectProperty",},
   ],

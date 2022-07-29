@@ -1,5 +1,5 @@
 
-cat_id = 0//irandom_range(0, rollback_players-1)
+cat_id = 1//irandom_range(0, rollback_players-1)
 
 rollback_define_player(obj_player)
 rollback_define_input({

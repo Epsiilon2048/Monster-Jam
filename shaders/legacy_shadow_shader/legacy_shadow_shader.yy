@@ -5,7 +5,7 @@
     "path": "folders/Lighting.yy",
   },
   "resourceVersion": "1.0",
-  "name": "shd_light_hide",
+  "name": "LEGACY_SHADOW_SHADER",
   "tags": [],
   "resourceType": "GMShader",
 }

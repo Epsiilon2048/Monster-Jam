@@ -16,6 +16,7 @@ vb = vertex_create_buffer()
 
 light_surface = -1
 mask_surface = -1
+depth_surface = -1
 
 
 function BGbegin(){
