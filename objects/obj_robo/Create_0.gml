@@ -1,5 +1,5 @@
 
-EMISSION_COLOR = 0x78B83C
+EMISSION_COLOR = 0x00FF00
 emission_color = EMISSION_COLOR
 
 robo_switch_state(obj_roboman.state_stand)

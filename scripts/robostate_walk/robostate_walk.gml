@@ -28,6 +28,5 @@ if (input.right - input.left) != 0
 
 direction = point_direction(0, 0, input.right - input.left, input.down - input.up)
 
-x += lengthdir_x(obj_roboman.SPD, direction)
-y += lengthdir_y(obj_roboman.SPD, direction)
+move_collide(lengthdir_x(obj_roboman.SPD, direction), lengthdir_y(obj_roboman.SPD, direction))
 }}

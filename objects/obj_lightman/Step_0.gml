@@ -19,8 +19,10 @@ function Quad(_vb, _x1, _y1, _x2, _y2){
 vertex_begin(vb, vf)
 var _vb = vb
 with(obj_wall){
-	Quad(_vb, x, y, x+sprite_width, y+sprite_height) //Negative Slope Diagonal Wall
-	Quad(_vb, x+sprite_width, y, x, y+sprite_height) //Positive Slope Diagonal Wall
+	Quad(_vb, bbox_left, bbox_top, bbox_right, bbox_bottom) //Negative Slope Diagonal Wall
+	Quad(_vb, bbox_left, bbox_bottom, bbox_right, bbox_top) //Positive Slope Diagonal Wall
+	//Quad(_vb, x, y, x+sprite_width, y+sprite_height) //Negative Slope Diagonal Wall
+	//Quad(_vb, x+sprite_width, y, x, y+sprite_height) //Positive Slope Diagonal Wall
 }
 with(obj_tri){
 	Quad(_vb, x, y, x+sprite_width, y+sprite_height) //large diagonal wall
