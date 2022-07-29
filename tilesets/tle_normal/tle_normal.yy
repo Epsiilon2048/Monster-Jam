@@ -115,7 +115,7 @@
   },
   "parent": {
     "name": "Tile Sets",
-    "path": "folders/Tile Sets.yy",
+    "path": "folders/Sprites/Tile Sets.yy",
   },
   "resourceVersion": "1.0",
   "name": "tle_normal",

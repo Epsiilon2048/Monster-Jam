@@ -11,6 +11,9 @@ if instance_exists(target)
 	{
 		x = lerp(x, target_x-lengthdir_x(RADIUS, dir), SPD)
 		y = lerp(y, target_y-lengthdir_y(RADIUS, dir), SPD)
-		camera_set_view_pos(view_camera[0], x-game_width/2, y-game_height/2)
+		camera_set_view_pos(view_camera[0], 
+			clamp(x-game_width/2, 0, room_width-camera_get_view_width(view_camera[0])),
+			clamp(y-game_height/2, 0, room_height-camera_get_view_height(view_camera[0]))
+		)
 	}
 }

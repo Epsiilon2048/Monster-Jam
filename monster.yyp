@@ -105,7 +105,7 @@
     {"id":{"name":"obj_cat","path":"objects/obj_cat/obj_cat.yy",},"order":1,},
     {"id":{"name":"o_console","path":"objects/o_console/o_console.yy",},"order":3,},
     {"id":{"name":"game_macros","path":"scripts/game_macros/game_macros.yy",},"order":1,},
-    {"id":{"name":"spr_cat_walk","path":"sprites/spr_cat_walk/spr_cat_walk.yy",},"order":14,},
+    {"id":{"name":"spr_cat_walk","path":"sprites/spr_cat_walk/spr_cat_walk.yy",},"order":15,},
     {"id":{"name":"initialize_bar_and_output","path":"scripts/initialize_bar_and_output/initialize_bar_and_output.yy",},"order":1,},
     {"id":{"name":"add_console_element","path":"scripts/add_console_element/add_console_element.yy",},"order":0,},
     {"id":{"name":"obj_locallight","path":"objects/obj_locallight/obj_locallight.yy",},"order":4,},
@@ -210,7 +210,7 @@
   ],
   "Folders": [
     {"folderPath":"folders/Sprites.yy","order":10,"resourceVersion":"1.0","name":"Sprites","tags":[],"resourceType":"GMFolder",},
-    {"folderPath":"folders/Tile Sets.yy","order":11,"resourceVersion":"1.0","name":"Tile Sets","tags":[],"resourceType":"GMFolder",},
+    {"folderPath":"folders/Sprites/Tile Sets.yy","order":14,"resourceVersion":"1.0","name":"Tile Sets","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Shaders.yy","order":9,"resourceVersion":"1.0","name":"Shaders","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Objects.yy","order":8,"resourceVersion":"1.0","name":"Objects","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Console.yy","order":14,"resourceVersion":"1.0","name":"Console","tags":[],"resourceType":"GMFolder",},

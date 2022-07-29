@@ -11,7 +11,7 @@ var vinc = vsp/iter
 var hincsign = sign(hinc)
 var vincsign = sign(vinc)
 
-for(var i = 0; i <= iter-1; i++)
+for(var i = 0; i <= iter; i++)
 {
 	if hincsign == -1
 	{

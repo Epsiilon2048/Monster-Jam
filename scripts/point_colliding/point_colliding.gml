@@ -1,5 +1,13 @@
 
-function point_colliding(x, y){
+function point_colliding(xx, yy){
 
-return position_meeting(x, y, obj_wall) or position_meeting(x, y, obj_tri)
+with obj_wall 
+{
+	if point_in_rectangle(xx, yy, bbox_left, bbox_top+32, bbox_right, bbox_bottom)
+	{
+		return true
+	}
+}
+
+return position_meeting(xx, yy, obj_tri)
 }

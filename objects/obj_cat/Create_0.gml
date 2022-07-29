@@ -12,6 +12,6 @@ if player.player_local
 	camera_set_following()
 }
 
-catvision = true
+catvision = false
 
 cat_get_input()

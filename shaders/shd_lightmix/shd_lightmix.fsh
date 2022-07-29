@@ -30,7 +30,7 @@ void main()
 	if (mask.a > 0.0)
 	{
 		emission = mask.r;
-		pos.y = mix(pixel_y + 1.0/180.0, pos.y, mask.b);
+		pos.y = mix(pixel_y /*+ 1.0/180.0*/, pos.y, mask.b);
 	}
 	
 	vec4 base = texture2D( gm_BaseTexture, v_vTexcoord );
