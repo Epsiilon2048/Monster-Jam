@@ -75,6 +75,7 @@ repeat 2
 		shauni("u_str", str)
 		shauni("u_fov", fov)
 		shauni("u_dir", dir)
+		shauni("u_game_height", game_height)
 	
 		shauni("reflection", obj_lightset.reflection)
 		shauni("diffusion", obj_lightset.diffusion)
@@ -103,6 +104,7 @@ matrix_set(matrix_world, matrix_build(0, 0, 0, 0, 0, 0, 1, 1, 1))
 
 shader_set(shd_lighthide)
 shauni("u_base_boost", obj_lightset.character_boost)
+shauni("u_texh", 1/game_height)
 shauni_surface("u_light", light_surface)
 shauni_surface("u_mask", mask_surface)
 draw_surface(depth_surface, vx, vy)

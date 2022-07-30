@@ -1,0 +1,8 @@
+
+As the Divine Creature, your goal is to avoid the humans until you can collect enough orbs to
+take your true form, whereupon you will wreak havoc. Darkness is your refuge!
+
+As a human, your goal is to entrap and aprehend the creature. You are equipped with concussive
+remote bombs, scanners, and flashlights to accomplish your task. You may also decide to light
+torches around the station, though you will be vulnerable while carrying one. If the creature 
+manages to take its true form, run!

@@ -2,11 +2,11 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "monster",
-    "path": "monster.yyp",
+    "name": "States",
+    "path": "folders/Cat/States.yy",
   },
   "resourceVersion": "1.0",
-  "name": "rollback_settings",
+  "name": "catstate_mon_stand",
   "tags": [],
   "resourceType": "GMScript",
 }

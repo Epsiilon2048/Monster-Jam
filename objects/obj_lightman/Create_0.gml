@@ -1,5 +1,5 @@
 //Resize the application surface to be lower res (for pixel games + performance boost)
-surface_resize(application_surface, 320, 180)
+surface_resize(application_surface, game_width, game_height)
 display_set_gui_maximize()
 
 //turn of automaic drawing of application surface

@@ -9,6 +9,7 @@ uniform float zz; //larger zz, larger light
 uniform float u_str; //strength
 uniform float u_dir; //direction
 uniform float u_fov; //field of vision
+uniform float u_game_height;
 uniform sampler2D u_nmap; //normal map sampled texture
 uniform sampler2D u_mask;
 
@@ -37,7 +38,7 @@ void main(){
 		str *= clamp((1.0-adis/hfov)*diffusion,0.0,1.0);
 	}
 		
-	if (mask.a > 0.0 && mask.y > u_pos.y/180.0)
+	if (mask.a > 0.0 && mask.y > u_pos.y/u_game_height)
 	{
 		gl_FragColor = vec4(vec3(u_color*mask.b), str + (str*mask.b*50.0));
 	}

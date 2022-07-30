@@ -19,7 +19,7 @@ void main()
 	if (mask.a > 0.0)
 	{
 		emission = ceil(mask.r);
-		pos.y = pixel_y + 1.0/180.0;
+		pos.y = pixel_y + u_texh;
 	}
 	
 	vec4 light = texture2D( u_light, v_vTexcoord);
