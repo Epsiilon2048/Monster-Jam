@@ -13,12 +13,9 @@ var y2 = y+lengthdir_y(SIGNAL_RANGE, light.dir-light.fov/2)
 var x3 = x+lengthdir_x(SIGNAL_RANGE, light.dir+light.fov/2)
 var y3 = y+lengthdir_y(SIGNAL_RANGE, light.dir+light.fov/2)
 
-light.size = LIGHT_SIZE
 if	points_colliding(x, y, x2, y2, , obj_cat) or
 	points_colliding(x, y, x3, y3, , obj_cat)
 {
-	light.size = 2000
-	//light.color = c_white
 	if not signal
 	{
 		sprite_index = spr_scannerwave

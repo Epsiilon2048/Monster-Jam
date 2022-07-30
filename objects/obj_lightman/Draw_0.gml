@@ -4,17 +4,22 @@ var _vy = vy
 
 if not surface_exists(light_surface)
 {
-	light_surface = surface_create(320, 180)
+	light_surface = surface_create(game_width, game_height)
 }
 
 if not surface_exists(mask_surface)
 {
-	mask_surface = surface_create(320, 180)
+	mask_surface = surface_create(game_width, game_height)
 }
 
 if not surface_exists(depth_surface)
 {
-	depth_surface = surface_create(320, 180)
+	depth_surface = surface_create(game_width, game_height)
+}
+
+if not surface_exists(buffer_surface)
+{
+	buffer_surface = surface_create(game_width, game_height)
 }
 
 sort_instance_depths()
@@ -76,7 +81,7 @@ repeat 2
 	
 		//shauni_surface("u_nmap", obj_lightman.normal_surface)
 		shauni_surface("u_mask", obj_lightman.mask_surface)
-		//draw_rectangle_color(_vx, _vy, _vx+320, _vy+180, color, color, color, color, 0) //canvas for drawing the light
+		//draw_rectangle_color(_vx, _vy, _vx+game_width, _vy+game_height, color, color, color, color, 0) //canvas for drawing the light
 		draw_surface_ext(obj_lightman.light_surface, _vx, _vy, 1, 1, 0, c_white, 1)
 	
 		z --

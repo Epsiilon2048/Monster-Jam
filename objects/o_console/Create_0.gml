@@ -234,7 +234,7 @@ soft_init = true
 can_run = false
 enabled = true
 
-scale()
+scale(1)
 DISPLAY = {}
 
 if gmcl_initialize_on_startup event_perform(ev_step, ev_step_end)

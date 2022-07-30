@@ -9,7 +9,8 @@ create(obj_catman)
 create(obj_roboman)
 create(obj_lightman)
 
-//create(o_console)
+create(o_console)
+create(obj_gui)
 create(obj_debug)
 create(obj_cursor)
 

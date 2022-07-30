@@ -1,2 +1,3 @@
 
-draw_mouse_pos = true
+draw_mouse_pos = false
+draw_win_dim = true

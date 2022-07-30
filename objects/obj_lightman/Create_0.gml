@@ -34,23 +34,23 @@ layer_script_end(_bg_layer2, BGend)
 
 
 // Normal layer functions
-normal_surface = -1
+buffer_surface = -1
 global.vx = 0
 global.vy = 0
 
 function layer_normal_begin(){
-	if not surface_exists(obj_lightman.normal_surface) 
-	{
-		obj_lightman.normal_surface = surface_create(320, 180)
-	}
-	surface_set_target(obj_lightman.normal_surface)
-	matrix_set(matrix_world, matrix_build(-global.vx, -global.vy, 0, 0, 0, 0, 1, 1, 1))
-	draw_clear_alpha(c_white, 0)
+	//if not surface_exists(obj_lightman.normal_surface) 
+	//{
+	//	obj_lightman.normal_surface = surface_create(320, 180)
+	//}
+	//surface_set_target(obj_lightman.normal_surface)
+	//matrix_set(matrix_world, matrix_build(-global.vx, -global.vy, 0, 0, 0, 0, 1, 1, 1))
+	//draw_clear_alpha(c_white, 0)
 }
 
 function layer_normal_end(){
-	surface_reset_target()
-	matrix_set(matrix_world, matrix_build(0, 0, 0, 0, 0, 0, 1, 1, 1))
+	//surface_reset_target()
+	//matrix_set(matrix_world, matrix_build(0, 0, 0, 0, 0, 0, 1, 1, 1))
 }
 
 var _n_layer = layer_get_id("Normal")

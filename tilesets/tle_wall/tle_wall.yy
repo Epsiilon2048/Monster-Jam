@@ -131,7 +131,7 @@
   },
   "parent": {
     "name": "Tile Sets",
-    "path": "folders/Sprites/Tile Sets.yy",
+    "path": "folders/Tile Sets.yy",
   },
   "resourceVersion": "1.0",
   "name": "tle_wall",

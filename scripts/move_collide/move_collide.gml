@@ -5,8 +5,16 @@ if hsp == 0 and vsp == 0 exit
 
 var iter = max(abs(hsp), abs(vsp))
 
-var hinc = hsp/iter
-var vinc = vsp/iter
+if hsp == vsp
+{
+	var hinc = hsp
+	var vinc = vsp
+}
+else
+{
+	var hinc = hsp/iter
+	var vinc = vsp/iter
+}
 
 var hincsign = sign(hinc)
 var vincsign = sign(vinc)
