@@ -1,3 +1,6 @@
+
+step ++
+
 //Creates Quad with two triangles. Used to make the shadows. 
 //Z coordinate is used as a flag to determine if the vertex will be repositioned in the shader
 function Quad(_vb, _x1, _y1, _x2, _y2){
@@ -49,15 +52,3 @@ vy = camera_get_view_y(view_camera[0])
 vx = camera_get_view_x(view_camera[0])
 global.vx = vx
 global.vy = vy
-
-
-
-//add lights by left clicking. For testing purposes
-if (mouse_check_button_pressed(mb_middle)){
-		instance_create_depth(mouse_x, mouse_y, depth, obj_light)	
-}
-
-//restart
-if (keyboard_check_pressed(ord("Q"))){
-	game_restart()	
-}

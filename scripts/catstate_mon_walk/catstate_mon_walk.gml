@@ -13,6 +13,12 @@ cat_get_input()
 
 function catstate_mon_walk_step(){ with obj_cat {
 
+if cat_increment_form_timer()
+{
+	cat_switch_state(obj_catman.state_walk)
+	exit
+}
+
 if not input.move
 {
 	cat_switch_state(obj_catman.state_mon_stand)

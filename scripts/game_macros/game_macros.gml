@@ -6,6 +6,8 @@
 #macro cam_x camera_get_view_x(view_camera[0])
 #macro cam_y camera_get_view_y(view_camera[0])
 
+#macro monster_red 0x241CEE
+
 #macro rollback_testing false
-#macro rollback_players 2
+#macro rollback_players 1
 #macro rollback_cat_player 0

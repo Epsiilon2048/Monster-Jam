@@ -13,6 +13,7 @@ if instance_exists(orb) and not orb.dying
 	if orbs >= obj_catman.ORBS_FOR_FORM
 	{
 		orbs = 0
+		final_form = obj_catman.FINAL_FORM_TIME
 		cat_toggle_catvision(true)
 		return true
 	}

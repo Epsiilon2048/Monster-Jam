@@ -35,6 +35,9 @@ write_surface = s
 shader_set(shd_chrab)
 shauni("u_dist", 1)
 shauni("u_texel", 1/win_width, 1/win_height)
+shauni("u_wave_time", step/pi/15)
+shauni("u_wave_intensity", cat_is_local and instance_exists(obj_cat) and obj_cat.final_form)
+shauni("u_cam_y", cam_y)
 draw_surface_ext(read_surface, 0, 0, scalex, scaley, 0, c_white, 1)
 shader_reset()
 

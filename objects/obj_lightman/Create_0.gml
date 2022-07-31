@@ -71,3 +71,4 @@ depth_objects = [
 ]
 
 cat_is_local = false
+step = 0
