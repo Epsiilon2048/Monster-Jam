@@ -9,7 +9,7 @@
   "swfPrecision": 2.525,
   "bbox_left": 0,
   "bbox_right": 15,
-  "bbox_top": 0,
+  "bbox_top": 7,
   "bbox_bottom": 47,
   "HTile": false,
   "VTile": false,
@@ -68,10 +68,10 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"d01a916f-beed-431f-8033-7618a08a6803","tags":[],"resourceType":"GMImageLayer",},
   ],
   "nineSlice": {
-    "left": 1,
-    "top": 1,
-    "right": 2,
-    "bottom": 32,
+    "left": 0,
+    "top": 8,
+    "right": 0,
+    "bottom": 25,
     "guideColour": [
       4294902015,
       4294902015,
