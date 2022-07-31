@@ -15,6 +15,12 @@ function catstate_walk_step(){ with obj_cat {
 
 cat_check_catvision()
 
+if cat_check_orb()
+{
+	cat_switch_state(obj_catman.state_mon_walk)
+	exit
+}
+
 if not input.move
 {
 	cat_switch_state(obj_catman.state_stand)

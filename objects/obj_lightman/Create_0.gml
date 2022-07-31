@@ -67,6 +67,7 @@ depth_objects = [
 	obj_cat,
 	obj_scanner,
 	obj_wall,
+	obj_orb,
 ]
 
 cat_is_local = false

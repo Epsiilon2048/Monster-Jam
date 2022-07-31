@@ -393,11 +393,7 @@ return make_color_hsv(
 
 	
 	
-function color_add_hsv(col, hue, saturation, value){ //returns a color with added hue
-
-if is_undefined(hue) hue = 0
-if is_undefined(saturation) saturation = 0
-if is_undefined(value) value = 0
+function color_add_hsv(col, hue=0, saturation=0, value=0){ //returns a color with added hue
 
 return make_color_hsv(
 	color_get_hue(col)+hue, 

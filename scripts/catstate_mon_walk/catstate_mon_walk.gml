@@ -2,7 +2,6 @@
 function catstate_mon_walk_initialize(){ with obj_cat {
 
 sprite_index = spr_monster
-cat_toggle_catvision(true)
 }}
 
 
@@ -13,12 +12,6 @@ cat_get_input()
 
 
 function catstate_mon_walk_step(){ with obj_cat {
-
-if input.fl_toggle_pressed
-{
-	cat_switch_state(obj_catman.state_walk)
-	exit
-}
 
 if not input.move
 {
@@ -33,5 +26,5 @@ if (input.right - input.left) != 0
 
 direction = point_direction(0, 0, input.right - input.left, input.down - input.up)
 
-move_collide(lengthdir_x(obj_catman.SPD, direction), lengthdir_y(obj_catman.SPD, direction))
+move_collide(lengthdir_x(obj_catman.SPD, direction), lengthdir_y(obj_catman.SPD, direction), 1)
 }}

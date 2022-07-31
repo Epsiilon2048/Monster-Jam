@@ -6,12 +6,8 @@ y = obj_catspawn.y
 
 state = obj_catman.state_stand
 
-if player.player_local
-{
-	instance_create_depth(x, y, 0, obj_camera)
-	camera_set_following()
-}
-
 catvision = false
+
+orbs = 0
 
 cat_get_input()

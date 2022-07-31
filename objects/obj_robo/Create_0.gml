@@ -10,12 +10,6 @@ with obj_robospawn if spawn_id == other.player.player_id
 	other.y = y
 }
 
-if player.player_local
-{
-	instance_create_depth(x, y, 0, obj_camera)
-	camera_set_following()
-}
-
 light = instance_create_layer(x, y, "Lights", obj_light, {
 	color: hex_to_color(0xfff1bf),
 	size: 350,

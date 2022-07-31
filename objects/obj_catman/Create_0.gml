@@ -5,3 +5,4 @@ state_mon_stand = new Catstate("mon_stand")
 state_mon_walk = new Catstate("mon_walk")
 
 SPD = 2.5
+ORBS_FOR_FORM = 2

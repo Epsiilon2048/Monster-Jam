@@ -5,8 +5,8 @@ if not instance_exists(obj_cat)
 	exit
 }
 
-x = obj_cat.x
-y = obj_cat.y
+x = cam_x+cam_width/2
+y = cam_y+cam_height/2
 
 if obj_cat.catvision
 {

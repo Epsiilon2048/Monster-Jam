@@ -5,7 +5,7 @@ var searching = instance_exists(search_object)
 
 if searching and points_between == -1
 {
-	points_between = point_distance(x1, y1, x2, y2) / 2
+	points_between = point_distance(x1, y1, x2, y2) / 4
 }
 
 if points_between > 0 or searching
