@@ -26,8 +26,6 @@
   "frames": [
     {"compositeImage":{"FrameId":{"name":"dc44d9af-bdb8-4548-b2ad-5242c04789df","path":"sprites/spr_creature_signal/spr_creature_signal.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
         {"FrameId":{"name":"dc44d9af-bdb8-4548-b2ad-5242c04789df","path":"sprites/spr_creature_signal/spr_creature_signal.yy",},"LayerId":{"name":"eb499e7a-6672-44a5-926c-bace8d8caf42","path":"sprites/spr_creature_signal/spr_creature_signal.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-        {"FrameId":{"name":"dc44d9af-bdb8-4548-b2ad-5242c04789df","path":"sprites/spr_creature_signal/spr_creature_signal.yy",},"LayerId":{"name":"Copied Layer 1","path":"sprites/spr_creature_signal/spr_creature_signal.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-        {"FrameId":{"name":"dc44d9af-bdb8-4548-b2ad-5242c04789df","path":"sprites/spr_creature_signal/spr_creature_signal.yy",},"LayerId":{"name":"Copied Layer 1","path":"sprites/spr_creature_signal/spr_creature_signal.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
       ],"parent":{"name":"spr_creature_signal","path":"sprites/spr_creature_signal/spr_creature_signal.yy",},"resourceVersion":"1.0","name":"dc44d9af-bdb8-4548-b2ad-5242c04789df","tags":[],"resourceType":"GMSpriteFrame",},
     {"compositeImage":{"FrameId":{"name":"0d6edada-9d2c-461a-8bd6-0c2a8b6bf988","path":"sprites/spr_creature_signal/spr_creature_signal.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
         {"FrameId":{"name":"0d6edada-9d2c-461a-8bd6-0c2a8b6bf988","path":"sprites/spr_creature_signal/spr_creature_signal.yy",},"LayerId":{"name":"eb499e7a-6672-44a5-926c-bace8d8caf42","path":"sprites/spr_creature_signal/spr_creature_signal.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
@@ -75,8 +73,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "GUI",
+    "path": "folders/GUI.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_creature_signal",

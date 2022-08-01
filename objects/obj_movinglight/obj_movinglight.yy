@@ -32,8 +32,8 @@
     {"propertyId":{"name":"size","path":"objects/obj_light/obj_light.yy",},"objectId":{"name":"obj_light","path":"objects/obj_light/obj_light.yy",},"value":"200","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
   ],
   "parent": {
-    "name": "Lighting",
-    "path": "folders/Lighting.yy",
+    "name": "Visuals",
+    "path": "folders/Visuals.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_movinglight",

@@ -37,8 +37,8 @@
     {"propertyId":{"name":"shadows","path":"objects/obj_locallight/obj_locallight.yy",},"objectId":{"name":"obj_locallight","path":"objects/obj_locallight/obj_locallight.yy",},"value":"False","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
   ],
   "parent": {
-    "name": "Lighting",
-    "path": "folders/Lighting.yy",
+    "name": "Visuals",
+    "path": "folders/Visuals.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_catlight",

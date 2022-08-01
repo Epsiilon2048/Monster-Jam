@@ -1,7 +1,15 @@
 
+if not instance_exists(obj_local.local_player) exit
+
 step ++
 
-if not instance_exists(obj_local.local_player) exit
+if not surface_exists(gui_surface)
+{
+	gui_surface = surface_create(game_width, game_height)
+}
+
+surface_set_target(gui_surface)
+draw_clear_alpha(c_black, 0)
 
 // Crew GUI
 if not obj_local.local_is_cat
@@ -9,22 +17,22 @@ if not obj_local.local_is_cat
 	if obj_local.local_player.object.state.name == "dead"
 	{
 		draw_you_dead_lol()		
-		exit
 	}
-	
-	draw_cat_detector_icon()
-	exit
+	else 
+	{
+		draw_cat_detector_icon()
+	}
 }
 
-
-
 // Kitty GUI
-if instance_exists(obj_cat)
+else if instance_exists(obj_cat)
 {
 	if not surface_exists(map_surface)
 	{
 		map_surface = surface_create(1, 1)
+		surface_reset_target()
 		create_map_surface(map_surface)
+		surface_set_target(gui_surface)
 	}
 	
 	draw_map()
@@ -33,15 +41,24 @@ if instance_exists(obj_cat)
 	{
 		draw_monster_bar()
 		catvision_time = 0
-		exit
 	}
-	
-	draw_orbs_notice()
-	
-	if obj_cat.catvision
+	else
 	{
-		catvision_time ++
-		draw_catvision_notice()
+		if obj_cat.catvision
+		{
+			catvision_time ++
+			draw_catvision_notice()
+		}
+		else catvision_time = 0
 	}
-	else catvision_time = 0
+	
+	draw_intro_circle()
 }
+
+draw_bar()
+bar_time ++
+intro_time ++
+
+surface_reset_target()
+
+draw_surface(gui_surface, 0, 0)

@@ -1,5 +1,7 @@
 
-function create_map_surface(surface){
+function create_map_surface(surface=map_surface){ with obj_gui {
+
+if not surface_exists(map_surface) exit
 
 var tilemap = layer_tilemap_get_id("Collision")
 var width = tilemap_get_width(tilemap)
@@ -12,14 +14,7 @@ draw_clear_alpha(c_black, 0)
 surface_set_target(surface)
 for(var yy = 0; yy <= height; yy++)
 for(var xx = 0; xx <= width; xx++)
-{
-	if position_meeting(xx*tile_width, yy*tile_height, obj_orb)
-	{
-		draw_set_color(c_white)
-		draw_point(xx, yy)
-		continue
-	}
-	
+{	
 	var tile = tilemap_get(tilemap, xx, yy)
 	if tile
 	{
@@ -30,4 +25,4 @@ for(var xx = 0; xx <= width; xx++)
 }
 draw_set_color(c_white)
 surface_reset_target()
-}
+}}

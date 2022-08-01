@@ -32,8 +32,8 @@
   ],
   "overriddenProperties": [],
   "parent": {
-    "name": "Lighting",
-    "path": "folders/Lighting.yy",
+    "name": "Visuals",
+    "path": "folders/Visuals.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_locallight",

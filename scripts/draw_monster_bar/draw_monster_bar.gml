@@ -1,9 +1,9 @@
 
 function draw_monster_bar(){
 
-static xx = 15
-static yy = game_height-10
 static bar_width = sprite_get_width(spr_monsterbar)
+static xx = game_width/2-bar_width/2
+static yy = game_height-40
 
 var progress = min(1, obj_cat.final_form/obj_catman.FINAL_FORM_TIME*1.05)
 

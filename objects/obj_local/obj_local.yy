@@ -25,8 +25,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "Online",
+    "path": "folders/Online.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_local",

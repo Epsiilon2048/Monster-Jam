@@ -36,8 +36,8 @@
     {"propertyId":{"name":"str","path":"objects/obj_locallight/obj_locallight.yy",},"objectId":{"name":"obj_locallight","path":"objects/obj_locallight/obj_locallight.yy",},"value":"-5","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
   ],
   "parent": {
-    "name": "Lighting",
-    "path": "folders/Lighting.yy",
+    "name": "Visuals",
+    "path": "folders/Visuals.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_crewlight",
