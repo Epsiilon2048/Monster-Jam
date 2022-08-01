@@ -7,6 +7,7 @@ varying vec4 v_vColour;
 uniform float u_base_boost;
 uniform sampler2D u_light;
 uniform sampler2D u_mask;
+uniform float u_texh;
 
 void main()
 {

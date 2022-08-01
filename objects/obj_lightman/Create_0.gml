@@ -70,5 +70,4 @@ depth_objects = [
 	obj_orb,
 ]
 
-cat_is_local = false
 step = 0

@@ -1,11 +1,17 @@
 
 step ++
 
-
+if not instance_exists(obj_local.local_player) exit
 
 // Crew GUI
-if not obj_lightman.cat_is_local
+if not obj_local.local_is_cat
 {
+	if obj_local.local_player.object.state.name == "dead"
+	{
+		draw_you_dead_lol()		
+		exit
+	}
+	
 	draw_cat_detector_icon()
 	exit
 }

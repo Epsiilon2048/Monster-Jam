@@ -10,6 +10,7 @@ rollback_define_input({
 	fl_toggle:			[ord("F")],
 	mx:					[m_axisx],
 	my:					[m_axisy],
+	action:				[mb_left],
 })
 
 rollback_use_random_input(false)

@@ -2,7 +2,7 @@
 if instance_exists(target)
 {
 	target_x = target.x
-	target_y = target.bbox_bottom - (target.bbox_bottom-target.bbox_top)/2
+	target_y = target.bbox_bottom - (target.sprite_height)/2
 	
 	dist = point_distance(x, y, target_x, target_y)
 	dir = point_direction(x, y, target_x, target_y)

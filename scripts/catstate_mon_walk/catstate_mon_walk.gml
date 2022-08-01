@@ -16,6 +16,13 @@ function catstate_mon_walk_step(){ with obj_cat {
 if cat_increment_form_timer()
 {
 	cat_switch_state(obj_catman.state_walk)
+	cat_toggle_catvision(false)
+	exit
+}
+
+if input.action_pressed
+{
+	cat_switch_state(obj_catman.state_mon_slash)
 	exit
 }
 
