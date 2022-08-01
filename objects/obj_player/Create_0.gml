@@ -5,6 +5,7 @@ if player_id == obj_rollback.cat_id
 	if player_local 
 	{
 		instance_create_layer(0, 0, "Instances", obj_catlight, {parent: object})
+		populate_orbs()
 		
 		obj_local.local_id = player_id
 		obj_local.local_player = self

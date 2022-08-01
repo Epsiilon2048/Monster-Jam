@@ -14,6 +14,7 @@ robo_get_input()
 function robostate_walk_step(robo){ with robo {
 
 robo_check_flashlight()
+robo_check_bombthrow()
 
 if not input.move
 {

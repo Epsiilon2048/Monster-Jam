@@ -25,7 +25,7 @@ function catstate_mon_slash_anim_end(){ with obj_cat {
 if cat_increment_form_timer()
 {
 	cat_switch_state(obj_catman.state_stand)
-	cat_toggle_catvision(false)
+	cat_end_transformation()
 	exit
 }
 

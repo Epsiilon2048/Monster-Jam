@@ -9,5 +9,5 @@
 #macro monster_red 0x241CEE
 
 #macro rollback_testing false
-#macro rollback_players 2
+#macro rollback_players 1
 #macro rollback_cat_player 0
