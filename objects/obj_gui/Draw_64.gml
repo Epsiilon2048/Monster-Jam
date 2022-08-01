@@ -21,6 +21,14 @@ if not obj_local.local_is_cat
 // Kitty GUI
 if instance_exists(obj_cat)
 {
+	if not surface_exists(map_surface)
+	{
+		map_surface = surface_create(1, 1)
+		create_map_surface(map_surface)
+	}
+	
+	draw_map()
+	
 	if obj_cat.final_form > 0 
 	{
 		draw_monster_bar()
