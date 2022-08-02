@@ -6,5 +6,6 @@ state_mon_walk = new Catstate("mon_walk")
 state_mon_slash = new Catstate("mon_slash")
 
 SPD = 2
-ORBS_FOR_FORM = 2
-FINAL_FORM_TIME = 20*60
+FORM_SPD = 1.5
+ORBS_FOR_FORM = 3
+FINAL_FORM_TIME = 24*60

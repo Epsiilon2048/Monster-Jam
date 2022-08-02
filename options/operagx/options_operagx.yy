@@ -1,6 +1,6 @@
 {
-  "option_operagx_version": "1.0.0.6",
-  "option_operagx_next_version": "1.0.0.7",
+  "option_operagx_version": "1.0.0.14",
+  "option_operagx_next_version": "1.0.0.15",
   "option_operagx_game_name": "Monster Jam!",
   "option_operagx_interpolate_pixels": false,
   "option_operagx_scale": 0,
@@ -11,7 +11,7 @@
   "option_operagx_team_id": "307a2327-d585-4105-8dbd-37888521050a",
   "option_operagx_editUrl": "https://dc.gxc.gg/game/71eaa3b8-e2bc-4286-9860-169934e268aa/edit",
   "option_operagx_internalShareUrl": "https://gxc.gg/games/fd499y/monster-jam-/tracks/7e874b0d-c54e-4bb6-b8ee-add68dbcc47e/",
-  "option_operagx_publicShareUrl": "",
+  "option_operagx_publicShareUrl": "https://gxc.gg/games/fd499y/monster-jam-/",
   "resourceVersion": "1.0",
   "name": "operagx",
   "tags": [],

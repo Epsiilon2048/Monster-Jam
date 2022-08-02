@@ -68,6 +68,7 @@ depth_objects = [
 	obj_scanner,
 	obj_wall,
 	obj_orb,
+	obj_bomb,
 ]
 
 step = 0

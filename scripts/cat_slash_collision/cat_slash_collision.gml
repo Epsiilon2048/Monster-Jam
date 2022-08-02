@@ -7,7 +7,7 @@ static top = sprite_get_bbox_top(spr_monster_slash_hb)-sprite_get_yoffset(spr_mo
 static right = sprite_get_bbox_right(spr_monster_slash_hb)-sprite_get_xoffset(spr_monster_slash_hb)
 static bottom = sprite_get_bbox_bottom(spr_monster_slash_hb)-sprite_get_yoffset(spr_monster_slash_hb)
 
-collision_rectangle_list(x+left, y+top, x+right, y+bottom, obj_robo, false, true, list, false)
+collision_rectangle_list(x+left*image_xscale, y+top, x+right*image_xscale, y+bottom, obj_robo, false, true, list, false)
 
 for(var i = 0; i <= ds_list_size(list)-1; i++)
 {

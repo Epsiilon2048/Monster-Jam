@@ -1,7 +1,7 @@
 
 function catstate_mon_walk_initialize(){ with obj_cat {
 
-sprite_index = spr_monster
+sprite_index = spr_monster_walk
 }}
 
 
@@ -39,5 +39,5 @@ if (input.right - input.left) != 0
 
 direction = point_direction(0, 0, input.right - input.left, input.down - input.up)
 
-move_collide(lengthdir_x(obj_catman.SPD, direction), lengthdir_y(obj_catman.SPD, direction), 1)
+move_collide_lendir(obj_catman.FORM_SPD, direction)
 }}

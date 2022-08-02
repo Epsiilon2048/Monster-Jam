@@ -16,12 +16,13 @@ draw_surface_ext(map_surface, xx, yy, 1, 1, 0, c_white, 0.6)
 var colstep = (floor(step/2) mod 2)
 draw_set_color(colstep ? monster_red : c_white)
 
-var catx = xx+obj_local.local_player.x/room_width*width
-var caty = yy+obj_local.local_player.y/room_height*height-1
+var catx = xx+obj_local.local_player.object.x/room_width*width
+var caty = yy+obj_local.local_player.object.y/room_height*height-1
 draw_rectangle(catx, caty, catx, caty, false)
 
 draw_set_color(c_white)
-with obj_orb
+
+if not obj_local.local_is_cat with obj_orb
 {
 	var orbx = xx+x/room_width*width
 	var orby = yy+y/room_height*height-1

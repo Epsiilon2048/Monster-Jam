@@ -6,7 +6,8 @@ for(var i = 0; i <= ds_grid_height(depth_list)-1; i++)
 	with depth_list[# 0, i] 
 	{
 		before_script()
-		draw_self()
+		if variable_instance_exists(self, "draw") draw()
+		else draw_self()
 		after_script()
 	}
 }

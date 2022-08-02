@@ -11,3 +11,4 @@ final_form = 0
 orbs = 0
 
 cat_get_input()
+populate_orbs()

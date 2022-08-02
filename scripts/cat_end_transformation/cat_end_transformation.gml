@@ -3,8 +3,8 @@ function cat_end_transformation(){
 
 cat_toggle_catvision(false)
 
-if player.player_local
-{
-	populate_orbs()
-}
+populate_orbs()
+
+if player.player_local set_bar("YOUR FORM HAS DISSIPATED")
+else set_bar("The creature is back to normal")
 }

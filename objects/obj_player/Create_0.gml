@@ -1,11 +1,10 @@
 
-if player_id == obj_rollback.cat_id
+if player_id == rollback_cat_player
 {
 	object = instance_create_layer(0, 0, "Instances", obj_cat, {player: id})
 	if player_local 
 	{
 		instance_create_layer(0, 0, "Instances", obj_catlight, {parent: object})
-		populate_orbs()
 		
 		set_bar(
 			"You are the DIVINE CREATURE", 

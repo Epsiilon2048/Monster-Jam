@@ -1,6 +1,4 @@
 
-cat_id = rollback_cat_player//irandom_range(0, rollback_players-1)
-
 if start_in_rollback
 {
 	rollback_define_player(obj_player)
@@ -16,11 +14,11 @@ if start_in_rollback
 	})
 
 	rollback_use_random_input(false)
-
-	if not rollback_join_game()
-	{
-		rollback_create_game(rollback_players, rollback_testing)
-	}
 }
 
+if not rollback_join_game()
+{
+	rollback_create_game(4, true, "North America")
+}
+create_managed_instances()
 room_goto_next()
