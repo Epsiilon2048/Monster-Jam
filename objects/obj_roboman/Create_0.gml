@@ -5,7 +5,7 @@ state_stand = new Robostate("stand")
 state_walk = new Robostate("walk")
 state_dead = new Robostate("dead")
 
-SPD = 0.7
+SPD = 1.3
 LIGHT_FOV = 100
 
 draw_player_id = false
