@@ -41,12 +41,12 @@ draw_clear_alpha(c_black, 0)
 shader_set(shd_mask)
 draw_depth_instances(mask_before_script)
 shader_reset()
+gpu_set_blendmode(bm_add)
 with obj_bomb
 {
-	gpu_set_blendmode(bm_add)
 	draw_radius()
-	gpu_set_blendmode(bm_normal)
 }
+gpu_set_blendmode(bm_normal)
 surface_reset_target()
 
 //Draw lights and shadows

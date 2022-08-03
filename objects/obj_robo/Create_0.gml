@@ -5,6 +5,8 @@ state_dead = new Robostate("dead")
 
 SPD = 1.3
 LIGHT_FOV = 100
+BOMBS = 2
+bombs_out = 0
 
 EMISSION_COLOR = 0xE13742
 emission_color = EMISSION_COLOR

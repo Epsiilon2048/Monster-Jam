@@ -22,10 +22,19 @@ global.mask_u_texel = shader_get_uniform(shd_mask, "u_texel")
 function mask_before_script(){
 
 var local = (object_index == obj_robo or object_index == obj_cat) and instance_exists(player) and player.player_local
-	
+
+if object_index == obj_explosion
+{
+	var e = 1
+}
+else
+{
+	var e = local ? 0.2 : 0
+}
+
 shader_set_uniform_f(global.mask_u_y, (y-cam_y+1)/game_height)
 shauni_color(global.mask_u_emission_color, emission_color, 1, true)
-shader_set_uniform_f(global.mask_u_emission_add, local ? 0.2 : 0)
+shader_set_uniform_f(global.mask_u_emission_add, e)
 
 var tex = sprite_get_texture(sprite_index, image_index)
 shader_set_uniform_f(global.mask_u_texel, texture_get_texel_width(tex), texture_get_texel_height(tex))

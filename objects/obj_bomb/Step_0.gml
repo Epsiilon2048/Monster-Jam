@@ -7,13 +7,22 @@ if spd > 0
 	}
 	
 	spd = lerp(spd, 0, SPD_LERP)
-	if spd < 0.2
+	if spd < 0.3
 	{
 		spd = 0
 		ring = 0
+		emission_color = 0xE16E5B
 	}
 }
 else if ring > -1
 {
 	ring = ring+0.2
+}
+
+if not instance_exists(parent) or (spd == 0 and parent.input.secondary_pressed)
+{
+	parent.bombs_out --
+	visible = false
+	instance_create_layer(x, y, layer, obj_explosion)
+	instance_destroy()
 }

@@ -7,7 +7,7 @@ light.dir = direction
 light.x = x+lengthdir_x(2, direction)
 light.y = y+lengthdir_y(2, direction)
 
-if SIGNAL_RANGE >= point_distance(x, y, obj_cat.x, obj_cat.y)
+if instance_exists(obj_cat) and SIGNAL_RANGE >= point_distance(x, y, obj_cat.x, obj_cat.y)
 {
 	var pass = false
 	
