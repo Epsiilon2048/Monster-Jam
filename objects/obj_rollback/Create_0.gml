@@ -15,11 +15,10 @@ if start_in_rollback
 	})
 
 	rollback_use_random_input(false)
+	if not rollback_join_game()
+	{
+		rollback_create_game(4, rollback_testing, "North America")
+	}
 }
 
-if not rollback_join_game()
-{
-	rollback_create_game(4, rollback_testing, "North America")
-}
-create_managed_instances()
 room_goto_next()

@@ -10,6 +10,6 @@
 #macro crew_purple 0x70424A
 #macro robo_blue 0xE16E5B
 
-#macro start_in_rollback true
+#macro start_in_rollback false
 #macro rollback_testing false
 #macro rollback_cat_player 1
