@@ -17,13 +17,13 @@ cat_check_catvision()
 
 if cat_check_orb()
 {
-	cat_switch_state(obj_catman.state_mon_walk)
+	cat_switch_state(state_mon_walk)
 	exit
 }
 
 if not input.move
 {
-	cat_switch_state(obj_catman.state_stand)
+	cat_switch_state(state_stand)
 	exit
 }
 
@@ -34,5 +34,5 @@ if (input.right - input.left) != 0
 
 direction = point_direction(0, 0, input.right - input.left, input.down - input.up)
 
-move_collide(lengthdir_x(obj_catman.SPD, direction), lengthdir_y(obj_catman.SPD, direction))
+move_collide(lengthdir_x(SPD, direction), lengthdir_y(SPD, direction))
 }}

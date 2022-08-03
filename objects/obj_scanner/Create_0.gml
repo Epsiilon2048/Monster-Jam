@@ -2,7 +2,7 @@
 emission_color = 0x0000FF
 
 SPD = 7
-LIGHT_SIZE = 1000
+LIGHT_SIZE = 500
 
 light = instance_create_layer(x, y, "Lights", obj_light, {
 	parent: self,

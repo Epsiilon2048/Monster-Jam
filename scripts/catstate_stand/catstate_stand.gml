@@ -17,13 +17,13 @@ cat_check_catvision()
 
 if cat_check_orb()
 {
-	cat_switch_state(obj_catman.state_mon_stand)
+	cat_switch_state(state_mon_stand)
 	exit
 }
 
 if input.move
 {
-	cat_switch_state(obj_catman.state_walk)
+	cat_switch_state(state_walk)
 	exit
 }
 }}

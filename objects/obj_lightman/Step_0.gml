@@ -5,6 +5,11 @@ step ++
 //Z coordinate is used as a flag to determine if the vertex will be repositioned in the shader
 function Quad(_vb, _x1, _y1, _x2, _y2){
 	//Upper triangle
+	_x1 = floor(_x1)
+	_y1 = floor(_y1)
+	_x2 = floor(_x2)
+	_y2 = floor(_y2)
+	
 	vertex_position_3d(_vb, _x1, _y1, 0)//0)
 	vertex_position_3d(_vb, _x1, _y1, 1)//2) //repositioned vertex
 	vertex_position_3d(_vb, _x2, _y2, 0)//1)
@@ -22,8 +27,8 @@ function Quad(_vb, _x1, _y1, _x2, _y2){
 vertex_begin(vb, vf)
 var _vb = vb
 with(obj_wall){
-	Quad(_vb, bbox_left, bbox_top+32, bbox_right, bbox_bottom) //Negative Slope Diagonal Wall
-	Quad(_vb, bbox_left, bbox_bottom, bbox_right, bbox_top+32) //Positive Slope Diagonal Wall
+	Quad(_vb, bbox_left, bbox_top+13, bbox_right, bbox_bottom+1) //Negative Slope Diagonal Wall
+	Quad(_vb, bbox_left, bbox_bottom+1, bbox_right, bbox_top+13) //Positive Slope Diagonal Wall
 	//Quad(_vb, x, y, x+sprite_width, y+sprite_height) //Negative Slope Diagonal Wall
 	//Quad(_vb, x+sprite_width, y, x, y+sprite_height) //Positive Slope Diagonal Wall
 }
@@ -33,22 +38,27 @@ with(obj_tri){
 }
 with(obj_robo){
 	Quad(_vb, bbox_left+1, bbox_bottom+1, bbox_right, bbox_bottom+1)
+	Quad(_vb, bbox_left+1, bbox_bottom+1-3, bbox_right, bbox_bottom+1) //Negative Slope Diagonal Wall
+	Quad(_vb, bbox_left+1, bbox_bottom+1, bbox_right, bbox_bottom+1-3) //Positive Slope Diagonal Wall
 }
 with(obj_cat){
 	Quad(_vb, bbox_left+1, bbox_bottom+1, bbox_right, bbox_bottom+1)
-	//Quad(_vb, x, bbox_bottom+1, x, bbox_bottom-5)
-	//Quad(_vb, bbox_left+1, bbox_top, bbox_right, bbox_bottom+1) //Negative Slope Diagonal Wall
-	//Quad(_vb, bbox_left+1, bbox_bottom+1, bbox_right, bbox_top) //Positive Slope Diagonal Wall
+	Quad(_vb, bbox_left+1, bbox_bottom+1-3, bbox_right, bbox_bottom+1) //Negative Slope Diagonal Wall
+	Quad(_vb, bbox_left+1, bbox_bottom+1, bbox_right, bbox_bottom+1-3) //Positive Slope Diagonal Wall
 }
-with(obj_scanner){  // Blocks own light! 
-	Quad(_vb, bbox_left, bbox_top, bbox_right, bbox_bottom) //Negative Slope Diagonal Wall
-	Quad(_vb, bbox_left, bbox_bottom, bbox_right, bbox_top) //Positive Slope Diagonal Wall
+with(obj_scanner){
+	Quad(_vb, bbox_left, bbox_top, bbox_right, bbox_bottom+1) //Negative Slope Diagonal Wall
+	Quad(_vb, bbox_left, bbox_bottom+1, bbox_right, bbox_top) //Positive Slope Diagonal Wall
 }
+//with(obj_lightblock){ 
+//	Quad(_vb, bbox_left, bbox_top, bbox_right, bbox_bottom+1) //Negative Slope Diagonal Wall
+//	Quad(_vb, bbox_left, bbox_bottom+1, bbox_right, bbox_top) //Positive Slope Diagonal Wall
+//}
 vertex_end(vb)
 
 
 //view movement controls
-vy = camera_get_view_y(view_camera[0])
-vx = camera_get_view_x(view_camera[0])
+vy = cam_y
+vx = cam_x
 global.vx = vx
 global.vy = vy

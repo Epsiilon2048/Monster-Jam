@@ -9,7 +9,7 @@
   "swfPrecision": 2.525,
   "bbox_left": 0,
   "bbox_right": 15,
-  "bbox_top": 7,
+  "bbox_top": 19,
   "bbox_bottom": 47,
   "HTile": false,
   "VTile": false,
@@ -69,9 +69,9 @@
   ],
   "nineSlice": {
     "left": 0,
-    "top": 8,
+    "top": 19,
     "right": 0,
-    "bottom": 25,
+    "bottom": 13,
     "guideColour": [
       4294902015,
       4294902015,

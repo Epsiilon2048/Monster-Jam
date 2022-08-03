@@ -10,10 +10,10 @@ if instance_exists(orb) and not orb.dying
 	orb.fov = 0
 	instance_destroy(orb)
 	
-	if orbs >= obj_catman.ORBS_FOR_FORM
+	if orbs >= ORBS_FOR_FORM
 	{
 		orbs = 0
-		final_form = obj_catman.FINAL_FORM_TIME
+		final_form = FINAL_FORM_TIME
 		cat_toggle_catvision(true)
 		
 		
@@ -36,8 +36,8 @@ if instance_exists(orb) and not orb.dying
 	}
 	else if player.player_local
 	{
-		var num = obj_catman.ORBS_FOR_FORM-orbs
-		set_bar(stitch(num," ORB",((num == 1) ? "" : "s")," REMAINING"))
+		var num = ORBS_FOR_FORM-orbs
+		set_bar(stitch(num," ORB",((num == 1) ? "" : "S")," REMAINING"))
 	}
 }
 

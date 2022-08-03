@@ -34,8 +34,6 @@ if not obj_local.local_is_cat
 // Kitty GUI
 else if instance_exists(obj_cat)
 {	
-	draw_map()
-	
 	if obj_cat.final_form > 0 
 	{
 		draw_monster_bar()

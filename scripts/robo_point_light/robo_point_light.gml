@@ -47,4 +47,9 @@ light.x = x+lengthdir_x(7, direction)
 light.y = y+lengthdir_y(7, direction)
 light.dir = direction
 direction = prev_dir
+
+if input.mx != x
+{
+	image_xscale = sign(input.mx-x)
+}
 }

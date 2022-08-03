@@ -12,4 +12,5 @@ create(obj_debug)
 create(obj_cursor)
 
 create(obj_lightset)
+create(obj_lightman)
 }

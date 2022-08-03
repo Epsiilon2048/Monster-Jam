@@ -32,7 +32,7 @@ else
 		
 		set_bar(
 			"You are a HUNTER OF THE DARK", 
-			"Entrap the creature before it takes its TRUE FORM",
+			"Entrap the creature before it TAKES FORM",
 		)
 	}
 }

@@ -16,25 +16,42 @@ if is_numeric(name)
 }
 
 var current = shader_current()
-var uni_name = string(current) + "." + name
 
 if is_sampler
-{
-	if not variable_struct_exists(global.__shader_samplers, uni_name)
+{	
+	var pass = false
+	if not variable_struct_exists(global.__shader_samplers, current)
 	{
-		global.__shader_samplers[$ uni_name] = shader_get_sampler_index(current, name)
+		global.__shader_samplers[$ current] = {}
+		pass = true
+		show_debug_message("SHAUNI / sampler / Indexed shader"+shader_get_name(current))
+	}
+	
+	if pass or not variable_struct_exists(global.__shader_samplers[$ current], name)
+	{
+		global.__shader_samplers[$ current][$ name] = shader_get_sampler_index(current, name)
+		show_debug_message("SHAUNI / sampler / Indexed uniform "+name+" from "+shader_get_name(current))
 	}
 
-	global.__current_sampler = global.__shader_samplers[$ uni_name]
+	global.__current_sampler = global.__shader_samplers[$ current][$ name]
 }
 else
 {
-	if not variable_struct_exists(global.__shader_uniforms, uni_name)
+	var pass = false
+	if not variable_struct_exists(global.__shader_uniforms, current)
 	{
-		global.__shader_uniforms[$ uni_name] = shader_get_uniform(current, name)
+		global.__shader_uniforms[$ current] = {}
+		pass = true
+		show_debug_message("SHAUNI / uniform / Indexed shader "+shader_get_name(current))
+	}
+	
+	if pass or not variable_struct_exists(global.__shader_uniforms[$ current], name)
+	{
+		global.__shader_uniforms[$ current][$ name] = shader_get_uniform(current, name)
+		show_debug_message("SHAUNI / uniform / Indexed uniform "+name+" from "+shader_get_name(current))
 	}
 
-	global.__current_uniform = global.__shader_uniforms[$ uni_name]
+	global.__current_uniform = global.__shader_uniforms[$ current][$ name]
 }
 }
 

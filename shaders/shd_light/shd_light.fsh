@@ -10,13 +10,13 @@ uniform float u_str; //strength
 uniform float u_dir; //direction
 uniform float u_fov; //field of vision
 uniform float u_game_height;
-uniform sampler2D u_nmap; //normal map sampled texture
+//uniform sampler2D u_nmap; //normal map sampled texture
 uniform sampler2D u_mask;
 
 uniform float reflection;
 uniform float diffusion;
-uniform float step_dist;
-uniform float steps;
+//uniform float step_dist;
+//uniform float steps;
 
 #define PI 3.1415926538
 

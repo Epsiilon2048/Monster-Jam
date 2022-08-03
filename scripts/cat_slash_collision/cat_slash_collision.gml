@@ -12,7 +12,7 @@ collision_rectangle_list(x+left*image_xscale, y+top, x+right*image_xscale, y+bot
 for(var i = 0; i <= ds_list_size(list)-1; i++)
 {
 	var robo = list[| i]
-	with robo robo_switch_state(obj_roboman.state_dead)
+	with robo robo_switch_state(state_dead)
 }
 
 ds_list_clear(list)

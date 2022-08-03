@@ -7,11 +7,12 @@ var write_surface = buffer_surface
 var s
 
 surface_set_target(write_surface)
+var tex = surface_get_texture(write_surface)
 shader_set(shd_lightmix)
 shauni("u_ambient_intensity", obj_lightset.ambient_intensity+obj_local.local_is_cat*obj_lightset.cat_ambient)
 shauni_surface("u_light", light_surface)
 shauni_surface("u_mask", mask_surface)
-shauni("u_texel", 1/game_width, 1/game_height)
+shauni("u_texel", texture_get_texel_width(tex), texture_get_texel_height(tex))
 draw_surface(read_surface, 0, 0)
 shader_reset()
 surface_reset_target()
@@ -32,7 +33,6 @@ if instance_exists(obj_local.local_player) and obj_local.local_player.object.sta
 	read_surface = write_surface
 	write_surface = s
 }
-
 else
 {
 	shader_set(shd_chrab)

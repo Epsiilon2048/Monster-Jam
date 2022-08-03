@@ -15,20 +15,20 @@ function catstate_mon_walk_step(){ with obj_cat {
 
 if cat_increment_form_timer()
 {
-	cat_switch_state(obj_catman.state_walk)
+	cat_switch_state(state_walk)
 	cat_end_transformation()
 	exit
 }
 
 if input.action_pressed
 {
-	cat_switch_state(obj_catman.state_mon_slash)
+	cat_switch_state(state_mon_slash)
 	exit
 }
 
 if not input.move
 {
-	cat_switch_state(obj_catman.state_mon_stand)
+	cat_switch_state(state_mon_stand)
 	exit
 }
 
@@ -39,5 +39,5 @@ if (input.right - input.left) != 0
 
 direction = point_direction(0, 0, input.right - input.left, input.down - input.up)
 
-move_collide_lendir(obj_catman.FORM_SPD, direction)
+move_collide_lendir(FORM_SPD, direction)
 }}

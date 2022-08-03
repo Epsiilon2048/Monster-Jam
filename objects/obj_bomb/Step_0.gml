@@ -4,8 +4,6 @@ if spd > 0
 	if move_collide_lendir(spd, direction)
 	{
 		direction = -direction
-		//x += lengthdir_x(1, direction)
-		//y += lengthdir_y(1, direction)
 	}
 	
 	spd = lerp(spd, 0, SPD_LERP)

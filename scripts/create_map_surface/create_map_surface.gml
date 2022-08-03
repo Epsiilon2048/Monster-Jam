@@ -18,7 +18,7 @@ for(var xx = 0; xx <= width; xx++)
 	var tile = tilemap_get(tilemap, xx, yy)
 	if tile
 	{
-		draw_set_color(monster_red)
+		draw_set_color(crew_purple)
 		draw_point(xx, yy)
 		continue
 	}

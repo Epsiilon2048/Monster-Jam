@@ -24,16 +24,16 @@ function catstate_mon_slash_anim_end(){ with obj_cat {
 
 if cat_increment_form_timer()
 {
-	cat_switch_state(obj_catman.state_stand)
+	cat_switch_state(state_stand)
 	cat_end_transformation()
 	exit
 }
 
 if input.move
 {
-	cat_switch_state(obj_catman.state_mon_walk)
+	cat_switch_state(state_mon_walk)
 	exit
 }
 
-cat_switch_state(obj_catman.state_mon_stand)
+cat_switch_state(state_mon_stand)
 }}

@@ -2,8 +2,8 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "Scripts",
-    "path": "folders/Scripts.yy",
+    "name": "Visuals",
+    "path": "folders/Visuals.yy",
   },
   "resourceVersion": "1.0",
   "name": "sort_instance_depths",

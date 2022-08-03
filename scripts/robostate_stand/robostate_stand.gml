@@ -18,7 +18,7 @@ robo_check_bombthrow()
 
 if input.move
 {
-	robo_switch_state(obj_roboman.state_walk)
+	robo_switch_state(state_walk)
 	exit
 }
 }}

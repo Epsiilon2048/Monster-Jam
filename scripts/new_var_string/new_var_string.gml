@@ -1,6 +1,6 @@
 
-global.id = global
-global.object_index = global
+//global.id = global
+//global.object_index = global
 
 ///@description Sets a string variable to a value
 ///@param {string} name

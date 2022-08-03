@@ -65,8 +65,8 @@ repeat 2
 		{
 			gpu_set_blendmode(bm_normal)
 			shader_set(shd_shadow)
-			shauni("u_pos", x, y)
-			shauni("u_z", z)
+			shader_set_uniform_f(global.shadow_u_pos, floor(x), floor(y))
+			shader_set_uniform_f(global.shadow_u_z, z)
 			vertex_submit(_vb, pr_trianglelist, -1)
 		}
 	
@@ -74,20 +74,20 @@ repeat 2
 		gpu_set_blendmode(bm_add)
 		//gpu_set_blendmode_ext_sepalpha(bm_inv_dest_alpha, bm_one, bm_zero, bm_zero)
 		shader_set(shd_light)
-		shauni_color("u_color", color, , true)
-		shauni("u_pos", x, y)
-		shauni("u_z", z)
-		shauni("zz", size)
-		shauni("u_str", str)
-		shauni("u_fov", fov)
-		shauni("u_dir", dir)
-		shauni("u_game_height", game_height)
+		shauni_color(global.light_u_color, color, , true)
+		shader_set_uniform_f(global.light_u_pos, x, y)
+		shader_set_uniform_f(global.light_u_z, z)
+		shader_set_uniform_f(global.light_zz, size)
+		shader_set_uniform_f(global.light_u_str, str)
+		shader_set_uniform_f(global.light_u_fov, fov)
+		shader_set_uniform_f(global.light_u_dir, dir)
+		shader_set_uniform_f(global.light_u_game_height, game_height)
 	
-		shauni("reflection", obj_lightset.reflection)
-		shauni("diffusion", obj_lightset.diffusion)
+		shader_set_uniform_f(global.light_reflection, obj_lightset.reflection)
+		shader_set_uniform_f(global.light_diffusion, obj_lightset.diffusion)
 	
-		//shauni_surface("u_nmap", obj_lightman.normal_surface)
-		shauni_surface("u_mask", obj_lightman.mask_surface)
+		//shauni_surface(u_nmap, obj_lightman.normal_surface)
+		texture_set_stage(global.light_u_mask, surface_get_texture(obj_lightman.mask_surface))
 		//draw_rectangle_color(_vx, _vy, _vx+game_width, _vy+game_height, color, color, color, color, 0) //canvas for drawing the light
 		draw_surface_ext(obj_lightman.light_surface, _vx, _vy, 1, 1, 0, c_white, 1)
 	

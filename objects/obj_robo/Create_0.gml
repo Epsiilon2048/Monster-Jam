@@ -1,20 +1,29 @@
 
-EMISSION_COLOR = 0x00FF00
+state_stand = new Robostate("stand")
+state_walk = new Robostate("walk")
+state_dead = new Robostate("dead")
+
+SPD = 1.3
+LIGHT_FOV = 100
+
+EMISSION_COLOR = 0xE13742
 emission_color = EMISSION_COLOR
 
-robo_switch_state(obj_roboman.state_stand)
+robo_switch_state(state_stand)
 
-with obj_robospawn if spawn_id == other.player.player_id
+with obj_robospawn if not spawned
 {
+	spawned = true
 	other.x = x
 	other.y = y
+	break
 }
 
 light = instance_create_layer(x, y, "Lights", obj_light, {
 	color: hex_to_color(0xfff1bf),
 	size: 350,
 	str: 0,
-	fov: obj_roboman.LIGHT_FOV,
+	fov: LIGHT_FOV,
 	parent: self,
 })
 
