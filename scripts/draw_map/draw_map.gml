@@ -30,13 +30,19 @@ with obj_scanner
 draw_surface_ext(map_surface, xx, yy, 1, 1, 0, c_white, 0.6)
 
 draw_set_color(colstep ? c_aqua : c_black)
-
 var catx = xx+obj_local.local_player.object.x/room_width*width
 var caty = yy+obj_local.local_player.object.y/room_height*height-1
 draw_rectangle(catx, caty, catx, caty, false)
 
-draw_set_color(c_white)
+draw_set_color(robo_blue)
+with obj_bomb
+{
+	var bombx = xx+x/room_width*width
+	var bomby = yy+y/room_height*height-1
+	draw_rectangle(bombx, bomby, bombx, bomby, false)
+}
 
+draw_set_color(c_white)
 with obj_orb
 {
 	var orbx = xx+x/room_width*width

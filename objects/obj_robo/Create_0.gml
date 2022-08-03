@@ -1,9 +1,12 @@
 
 state_stand = new Robostate("stand")
 state_walk = new Robostate("walk")
+state_stunned = new Robostate("stunned")
 state_dead = new Robostate("dead")
 
 SPD = 1.3
+STUN_TIME = 3*60
+stun = 0
 LIGHT_FOV = 100
 BOMBS = 2
 bombs_out = 0
