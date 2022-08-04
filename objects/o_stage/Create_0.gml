@@ -15,3 +15,6 @@ use_depth_map = false
 draw_depth_map = false
 depth_map = -1
 surface = -1
+
+_mx = 0
+_my = 0

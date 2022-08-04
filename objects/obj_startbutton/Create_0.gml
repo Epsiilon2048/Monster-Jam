@@ -3,5 +3,7 @@ clicking = false
 active = false
 state = 0
 
-x = game_width-10-sprite_width
-y = game_height-20-sprite_height
+x = game_width-5-sprite_width
+y = game_height-5-sprite_height
+
+image_alpha = -0.5

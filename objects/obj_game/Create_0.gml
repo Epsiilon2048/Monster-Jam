@@ -4,5 +4,5 @@ window_height_prev = 0
 
 create_default_instances()
 
-overlay = true
+overlay = false
 show_debug_overlay(overlay)

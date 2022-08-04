@@ -27,7 +27,7 @@ if true
 	var prev_wlerp = 1
 	var prev_hlerp = 1
 
-	calc_px_info(x, y, stage.width, stage.height, stage.originx, stage.originy, cam_x, cam_y, stage.cam_w, stage.cam_h)
+	calc_px_info(x, y, stage.width, stage.height, stage.originx, stage.originy, _cam_x, _cam_y, stage.cam_w, stage.cam_h)
 
 	for(var i = 0; i <= ds_list_size(stage.layers)-1; i++)
 	{

@@ -1,7 +1,13 @@
 
 function draw_intro_circle(){
 
-var time = animcurve_channel_evaluate(circle_intro, intro_time/(4*60))
+if intro_time > 100 and instance_exists(o_stage)
+{
+	instance_destroy(o_stage)
+	camera_set_following(obj_cat, true)
+}
+
+var time = animcurve_channel_evaluate(circle_intro, max(0, (intro_time-140)/(4*60)))
 
 if time >= 1
 {
@@ -17,11 +23,11 @@ if not surface_exists(circle_surface)
 	circle_surface = surface_create(game_width, game_height)
 }
 
-var radius = time*game_width/1.5
+var radius = time*game_width
 
 surface_reset_target()
 surface_set_target(circle_surface)
-draw_clear_alpha(monster_red, 1)
+draw_clear_alpha(monster_red, intro_time/100)
 gpu_set_blendmode(bm_subtract)
 draw_circle(obj_cat.x-cam_x, obj_cat.y-cam_y, radius, false)
 gpu_set_blendmode(bm_normal)

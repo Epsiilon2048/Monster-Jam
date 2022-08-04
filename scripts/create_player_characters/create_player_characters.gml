@@ -13,7 +13,7 @@ if player_id == rollback_cat_player
 			(irandom(6) == 1) ? "Absorb ORBS to reach TRUE FORB" : "Absorb ORBS to reach your TRUE FORM",
 			monster_red
 		)
-		obj_gui.bar_time = -2.5*60
+		obj_gui.bar_time = -2.5*60-140
 		obj_gui.intro_time = 0
 		
 		obj_local.local_id = player_id
@@ -36,11 +36,8 @@ else
 			"You are a HUNTER OF THE DARK", 
 			"Entrap the creature before it TAKES FORM",
 		)
+		instance_destroy(o_stage)
+		camera_set_following(object, true)
 	}
-}
-
-if player_local
-{
-	camera_set_following(object, true)
 }
 }}

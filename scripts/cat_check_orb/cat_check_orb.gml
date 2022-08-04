@@ -16,16 +16,16 @@ if instance_exists(orb) and not orb.dying
 		final_form = FINAL_FORM_TIME
 		cat_toggle_catvision(true)
 		
+		with obj_orb
+		{
+			if not dying instance_destroy()
+			dying = true
+			visible = false
+		}
 		
 		if player.player_local
 		{
 			set_bar("SEEK AND SLAY", , monster_red)
-			with obj_orb
-			{
-				if not dying instance_destroy()
-				dying = true
-				visible = false
-			}
 		}
 		else
 		{

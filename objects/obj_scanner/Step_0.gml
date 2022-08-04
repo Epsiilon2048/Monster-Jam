@@ -4,8 +4,8 @@ if not rollback_game_running exit
 direction += SPD
 light.dir = direction
 
-light.x = x+lengthdir_x(2, direction)
-light.y = y+lengthdir_y(2, direction)
+light.x = x+lengthdir_x(3, direction)
+light.y = y+lengthdir_y(3, direction)
 
 if instance_exists(obj_cat) and SIGNAL_RANGE >= point_distance(x, y, obj_cat.x, obj_cat.y)
 {

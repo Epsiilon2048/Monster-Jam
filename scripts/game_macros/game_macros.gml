@@ -12,4 +12,4 @@
 
 #macro start_in_rollback true
 #macro rollback_testing false
-#macro rollback_cat_player 1
+#macro rollback_cat_player 0

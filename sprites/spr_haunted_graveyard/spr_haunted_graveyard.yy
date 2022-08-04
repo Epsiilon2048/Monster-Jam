@@ -70,7 +70,7 @@
   "nineSlice": null,
   "parent": {
     "name": "Haunted Graveyard",
-    "path": "folders/Backgrounds/Pixel Art/Haunted Graveyard.yy",
+    "path": "folders/Backgrounds/Haunted Graveyard.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_haunted_graveyard",

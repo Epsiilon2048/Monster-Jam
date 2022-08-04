@@ -22,3 +22,5 @@ draw_set_circle_precision(64)
 
 curve = animcurve_get(ac_gui)
 circle_intro = animcurve_get_channel(curve, "circle_intro")
+
+stage_screen = c_aqua
