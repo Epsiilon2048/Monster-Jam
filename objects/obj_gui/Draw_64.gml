@@ -24,14 +24,14 @@ if not instance_exists(obj_local.local_player) or not instance_exists(obj_local.
 	
 	with obj_startbutton
 	{
-		if obj_local.local_id == 0
-		{
+		//if obj_local.local_id == 0
+		//{
 			draw_sprite_ext(sprite_index, state, x-cam_x, y-cam_y, 1, 1, 0, c_white, image_alpha)
-		}
-		else
-		{
-			draw_sprite(sprite_index, 0, x-cam_x, y-cam_y)
-		}
+		//}
+		//else
+		//{
+		//	draw_sprite(sprite_index, 0, x-cam_x, y-cam_y)
+		//}
 	}
 }
 else

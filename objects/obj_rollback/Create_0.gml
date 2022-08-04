@@ -20,7 +20,7 @@ if start_in_rollback
 	rollback_use_random_input(false)
 	if not rollback_join_game()
 	{
-		rollback_create_game(4, rollback_testing, "North America")
+		rollback_create_game(4, rollback_testing,)// "North America")
 	}
 	
 	room_goto(rm_level)

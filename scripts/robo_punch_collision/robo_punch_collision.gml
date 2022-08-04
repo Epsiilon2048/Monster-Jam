@@ -17,6 +17,9 @@ if instance_exists(obj_cat) and rectangle_in_rectangle(
 	}
 	else
 	{
+		obj_cat.image_yscale = -1
+		obj_cat.image_speed = 0
+		obj_cat.y -= 16
 		with obj_cat cat_switch_state(state_pause)
 		with obj_robo robo_switch_state(state_pause)
 		

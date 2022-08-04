@@ -2,20 +2,20 @@
   "bboxMode": 2,
   "collisionKind": 1,
   "type": 0,
-  "origin": 7,
+  "origin": 9,
   "preMultiplyAlpha": false,
   "edgeFiltering": false,
   "collisionTolerance": 0,
   "swfPrecision": 2.525,
-  "bbox_left": 1,
-  "bbox_right": 26,
-  "bbox_top": 26,
-  "bbox_bottom": 28,
+  "bbox_left": 59,
+  "bbox_right": 88,
+  "bbox_top": 84,
+  "bbox_bottom": 86,
   "HTile": false,
   "VTile": false,
   "For3D": false,
-  "width": 30,
-  "height": 30,
+  "width": 150,
+  "height": 150,
   "textureGroupId": {
     "name": "Default",
     "path": "texturegroups/Default",
@@ -24,9 +24,9 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"2fdd8e8f-6e15-4a0a-8223-b2899db06c35","path":"sprites/spr_robo_green_dead/spr_robo_green_dead.yy",},"LayerId":null,"resourceVersion":"1.0","name":"composite","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"2fdd8e8f-6e15-4a0a-8223-b2899db06c35","path":"sprites/spr_robo_green_dead/spr_robo_green_dead.yy",},"LayerId":{"name":"55c75c04-81d3-4a18-8544-8eece7c19bda","path":"sprites/spr_robo_green_dead/spr_robo_green_dead.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_robo_green_dead","path":"sprites/spr_robo_green_dead/spr_robo_green_dead.yy",},"resourceVersion":"1.0","name":"2fdd8e8f-6e15-4a0a-8223-b2899db06c35","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"564540d0-45df-4c8b-9b2f-0d6cfbab3e6f","path":"sprites/spr_robo_green_dead/spr_robo_green_dead.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"564540d0-45df-4c8b-9b2f-0d6cfbab3e6f","path":"sprites/spr_robo_green_dead/spr_robo_green_dead.yy",},"LayerId":{"name":"316ace40-039c-4aec-bb8a-c5f12ef1223b","path":"sprites/spr_robo_green_dead/spr_robo_green_dead.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_robo_green_dead","path":"sprites/spr_robo_green_dead/spr_robo_green_dead.yy",},"resourceVersion":"1.0","name":"564540d0-45df-4c8b-9b2f-0d6cfbab3e6f","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
     "spriteId": {"name":"spr_robo_green_dead","path":"sprites/spr_robo_green_dead/spr_robo_green_dead.yy",},
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"57e1d593-9621-4f7b-957f-c68bba84ded0","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"2fdd8e8f-6e15-4a0a-8223-b2899db06c35","path":"sprites/spr_robo_green_dead/spr_robo_green_dead.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
+            {"id":"1a56c17e-f4e6-49bf-bb2b-7cbb921f74ef","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"564540d0-45df-4c8b-9b2f-0d6cfbab3e6f","path":"sprites/spr_robo_green_dead/spr_robo_green_dead.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
     "visibleRange": null,
@@ -54,8 +54,8 @@
     "backdropHeight": 1080,
     "backdropXOffset": 0.0,
     "backdropYOffset": 0.0,
-    "xorigin": 15,
-    "yorigin": 30,
+    "xorigin": 74,
+    "yorigin": 88,
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_robo_green_dead","path":"sprites/spr_robo_green_dead/spr_robo_green_dead.yy",},
@@ -65,7 +65,7 @@
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"55c75c04-81d3-4a18-8544-8eece7c19bda","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"316ace40-039c-4aec-bb8a-c5f12ef1223b","tags":[],"resourceType":"GMImageLayer",},
   ],
   "nineSlice": null,
   "parent": {
