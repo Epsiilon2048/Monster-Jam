@@ -10,7 +10,7 @@ emission_color = c_white
 
 draw_radius = function(){
 	
-	if ring > 0
+	if ring > 0 and (1 - ring/10) > 0
 	{
 		draw_set_color(c_red)
 		draw_set_alpha(1 - ring/10)
@@ -22,7 +22,7 @@ draw_radius = function(){
 
 draw = function(){
 	draw_self()
-	if ring > 0
+	if ring > 0 and (1 - ring/10) > 0
 	{
 		draw_set_color(0xE16E5B)
 		draw_set_alpha(1 - ring/10)

@@ -12,6 +12,7 @@ if spd > 0
 		spd = 0
 		ring = 0
 		emission_color = 0xFF6F00
+		play_sound_for_player(parent.player.player_id, snd_bomb_beep, 1, false)
 	}
 	
 	image_speed = spd/7
@@ -26,5 +27,6 @@ if not instance_exists(parent) or (spd == 0 and parent.input.secondary_pressed)
 	parent.bombs_out --
 	visible = false
 	instance_create_layer(x, y, layer, obj_explosion)
+	play_sound_for_player(parent.player.player_id, snd_explosion, 2, false)
 	instance_destroy()
 }

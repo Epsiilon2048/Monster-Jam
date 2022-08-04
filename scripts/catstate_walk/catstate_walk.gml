@@ -2,6 +2,8 @@
 function catstate_walk_initialize(){ with obj_cat {
 
 sprite_index = spr_cat_walk
+image_index = 0
+footstep = 0
 }}
 
 
@@ -35,4 +37,18 @@ if (input.right - input.left) != 0
 direction = point_direction(0, 0, input.right - input.left, input.down - input.up)
 
 move_collide(lengthdir_x(SPD, direction), lengthdir_y(SPD, direction))
+
+if not (footstep mod FOOTSTEP_INTERVAL)
+{
+	play_sound_for_player(player.player_id, 
+		choose(
+			snd_catwalk1,
+			snd_catwalk2,
+			snd_catwalk3,
+			snd_catwalk4,
+			snd_catwalk5,
+		), 5, false
+	)
+}
+footstep ++
 }}

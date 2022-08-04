@@ -13,3 +13,6 @@ view_set_wport(0, game_width)
 view_set_hport(0, game_height)
 //view_wport[0] = game_width
 //view_hport[0] = game_height
+
+//audio_listener_orientation(0, 0, 1000, 0, 0, 0)
+//audio_falloff_set_model(audio_falloff_linear_distance)

@@ -2,6 +2,8 @@
 function robostate_walk_initialize(robo){ with robo {
 
 sprite_index = spr_robo_green_walk
+image_index = 0
+footstep = 0
 }}
 
 
@@ -31,4 +33,16 @@ if not input.move
 direction = point_direction(0, 0, input.right - input.left, input.down - input.up)
 
 move_collide(lengthdir_x(SPD, direction), lengthdir_y(SPD, direction))
+
+if not (footstep mod FOOTSTEP_INTERVAL)
+{
+	play_sound_for_player(player.player_id, 
+		choose(
+			snd_robowalk1,
+			snd_robowalk2,
+			snd_robowalk3,
+		), 5, false
+	)
+}
+footstep ++
 }}

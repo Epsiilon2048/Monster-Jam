@@ -3,6 +3,8 @@ function robostate_windup_initialize(robo){ with robo {
 
 sprite_index = spr_robo_green_windup
 image_index = 0
+
+play_sound_for_player(player.player_id, snd_windup, 2, false)
 }}
 
 

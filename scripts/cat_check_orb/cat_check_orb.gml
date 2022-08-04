@@ -23,13 +23,16 @@ if instance_exists(orb) and not orb.dying
 			visible = false
 		}
 		
+		audio_play_sound(snd_monster_roar, 1, false)
+		audio_play_sound(snd_monster_roar2, 1, false)
+		
 		if player.player_local
 		{
-			set_bar("SEEK AND SLAY", , monster_red)
+			set_bar("SEEK AND SLAY THE HUNTERS", , monster_red)
 		}
 		else
 		{
-			set_bar("THE CREATURE HAS TAKEN TRUE FORM", , monster_red)
+			set_bar("THE DIVINE CREATURE HAS TAKEN FORM", , monster_red)
 		}
 		
 		return true

@@ -19,6 +19,8 @@ if position_meeting(obj_menuinfo.input.mx, obj_menuinfo.input.my, self)
 			instance_destroy(obj_menuinfo)
 			instance_destroy()
 			create_player_characters()
+			audio_stop_sound(music)
+			audio_play_sound(snd_menu_enter, 2, false)
 			exit
 		}
 	}

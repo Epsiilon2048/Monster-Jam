@@ -2,6 +2,8 @@
 function catstate_mon_walk_initialize(){ with obj_cat {
 
 sprite_index = spr_monster_walk
+image_index = 0
+footstep = 0
 }}
 
 
@@ -46,4 +48,17 @@ if colliding and nodiagonal and not box_colliding(x+lengthdir_x(31, direction), 
 {
 	cat_switch_state(state_mon_jump)
 }
+
+if not (footstep mod FORM_FOOTSTEP_INTERVAL)
+{
+	play_sound_for_player(player.player_id, 
+		choose(
+			snd_monwalk1,
+			snd_monwalk2,
+			snd_monwalk3,
+			snd_monwalk4,
+		), 5, false
+	)
+}
+footstep ++
 }}

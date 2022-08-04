@@ -13,6 +13,7 @@
 			// Do thing
 			clicking = false
 			state = 2
+			audio_play_sound(snd_menu_click, 2, false)
 			rollback_start_game()
 			exit
 		}

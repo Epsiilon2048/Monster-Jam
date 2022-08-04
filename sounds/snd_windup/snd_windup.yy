@@ -6,14 +6,14 @@
   "sampleRate": 44100,
   "bitDepth": 1,
   "bitRate": 128,
-  "volume": 0.2,
+  "volume": 0.33,
   "preload": false,
   "audioGroupId": {
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "snd_windup.wav",
-  "duration": 2.017687,
+  "duration": 0.715442,
   "parent": {
     "name": "Sounds",
     "path": "folders/Sounds.yy",

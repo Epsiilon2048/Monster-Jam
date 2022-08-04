@@ -11,13 +11,23 @@ state_stunned = new Robostate("stunned")
 state_dead = new Robostate("dead")
 
 SPD = 1.3
+
 STUN_TIME = 3*60
 stun = 0
+
+BOMBS = 2
+bombs_out = 0
+
 LIGHT_FOV = 100
 LIGHT_COLOR = hex_to_color(0xfff1bf)
 LIGHT_SIZE = 350
-BOMBS = 2
-bombs_out = 0
+//light.fov = LIGHT_FOV
+//light.color = LIGHT_COLOR
+//light.size = LIGHT_SIZE
+//light.dir = 0
+
+FOOTSTEP_INTERVAL = 26
+footstep = 0
 
 EMISSION_COLOR = 0xE13742
 emission_color = EMISSION_COLOR
@@ -32,6 +42,8 @@ with obj_robospawn if not spawned
 	break
 }
 
+flashlight = true
+
 light = instance_create_layer(x, y, "Lights", obj_light, {
 	color: LIGHT_COLOR,
 	size: LIGHT_SIZE,
@@ -39,7 +51,5 @@ light = instance_create_layer(x, y, "Lights", obj_light, {
 	fov: LIGHT_FOV,
 	parent: self,
 })
-
-flashlight = true
 
 robo_get_input()

@@ -25,6 +25,10 @@ FORM_SPD = 1.5
 ORBS_FOR_FORM = 3
 FINAL_FORM_TIME = 24*60
 
+FOOTSTEP_INTERVAL = 8
+FORM_FOOTSTEP_INTERVAL = 33
+footstep = 0
+
 emission_color = c_white
 
 x = obj_catspawn.x

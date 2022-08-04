@@ -16,4 +16,6 @@ if not instance_exists(o_stage) and instance_exists(target)
 			floor(clamp(y-game_height/2, 0, room_height-cam_height))
 		)
 	}
+	
+	//audio_listener_position(cam_x, cam_y, 0)
 }

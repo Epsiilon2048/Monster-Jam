@@ -10,6 +10,9 @@ light.color = EMISSION_COLOR
 light.size = 1000
 light.fov = 80
 
+play_sound_for_player(player.player_id, snd_punch, 2, false)
+play_sound_for_player(player.player_id, snd_punch2, 2, false)
+
 robo_punch_collision()
 }}
 
