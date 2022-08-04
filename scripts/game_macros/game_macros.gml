@@ -13,3 +13,5 @@
 #macro start_in_rollback true
 #macro rollback_testing false
 #macro rollback_cat_player 1
+
+global.prev_cat = 1

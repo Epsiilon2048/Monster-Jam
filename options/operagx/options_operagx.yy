@@ -1,6 +1,6 @@
 {
-  "option_operagx_version": "1.0.0.19",
-  "option_operagx_next_version": "1.0.0.20",
+  "option_operagx_version": "1.0.0.22",
+  "option_operagx_next_version": "1.0.0.23",
   "option_operagx_game_name": "Monster Jam!",
   "option_operagx_interpolate_pixels": false,
   "option_operagx_scale": 0,
@@ -14,6 +14,5 @@
   "option_operagx_publicShareUrl": "https://gxc.gg/games/fd499y/monster-jam-/",
   "resourceVersion": "1.0",
   "name": "operagx",
-  "tags": [],
   "resourceType": "GMOperaGXOptions",
 }

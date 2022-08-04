@@ -12,6 +12,8 @@ if instance_exists(o_stage)
 	draw_rectangle(0, 0, game_width, game_height, false)
 	gpu_set_blendmode(bm_normal)
 	draw_set_color(c_white)
+	
+	draw_sprite(spr_monster_jam, 0, 20, 20)
 }
 
 with obj_reset
