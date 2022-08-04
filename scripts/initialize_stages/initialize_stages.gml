@@ -5,8 +5,8 @@ stages = {}
 
 stages.grave = new PX_STAGE()
 stages.grave.initialize(
-	480*6,	270,	//stage wh
-	480*6/2, 270/2,	//origin
+	480*1.5,	270,	//stage wh
+	480*1.5/2, 270/2,	//origin
 	game_width,	game_height,	//cam wh
 [				//layers
 {sprite: spr_haunted_graveyardlayer_00, wlerp: 1, hlerp: 1, originx: 0, originy: 0, group: "", anim: 0, bind: false, hide: false,},

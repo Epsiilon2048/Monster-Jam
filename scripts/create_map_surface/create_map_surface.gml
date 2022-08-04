@@ -1,7 +1,7 @@
 
 function create_map_surface(surface=map_surface){ with obj_gui {
 
-if not surface_exists(map_surface) exit
+if not surface_exists(map_surface) or not layer_exists("Collision") exit
 
 var tilemap = layer_tilemap_get_id("Collision")
 var width = tilemap_get_width(tilemap)

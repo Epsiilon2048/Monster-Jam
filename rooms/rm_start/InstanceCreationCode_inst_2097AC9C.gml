@@ -1,2 +1,0 @@
-
-stage = stages.grave

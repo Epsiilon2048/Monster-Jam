@@ -10,6 +10,8 @@ if start_in_rollback
 		fl_toggle:	[ord("F")],
 		mx:			[m_axisx],
 		my:			[m_axisy],
+		mx_gui:		[m_axisx_gui],
+		my_gui:		[m_axisy_gui],
 		action:		[mb_left],
 		secondary:	[mb_right],
 	})
@@ -19,6 +21,6 @@ if start_in_rollback
 	{
 		rollback_create_game(4, rollback_testing, "North America")
 	}
+	
+	room_goto(rm_level)
 }
-
-room_goto_next()

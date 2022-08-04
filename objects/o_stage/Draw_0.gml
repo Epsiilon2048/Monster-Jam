@@ -4,11 +4,6 @@ if not surface_exists(surface)
 	surface = surface_create(stage.cam_w, stage.cam_h)	
 }
 
-if use_depth_map and not surface_exists(depth_map)
-{
-	depth_map = surface_create(stage.cam_w, stage.cam_h)	
-}
-
 if	surface_get_width (surface) != stage.cam_w or 
 	surface_get_height(surface) != stage.cam_h
 {

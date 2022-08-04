@@ -21,7 +21,8 @@ s = read_surface
 read_surface = write_surface
 write_surface = s
 
-if instance_exists(obj_local.local_player) and obj_local.local_player.object.state.name == "dead"
+if	instance_exists(obj_local.local_player) and instance_exists(obj_local.local_player.object) 
+	and obj_local.local_player.object.state.name == "dead"
 {
 	surface_set_target(write_surface)
 	shader_set(shd_dead)

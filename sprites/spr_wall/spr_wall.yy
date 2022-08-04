@@ -1,5 +1,5 @@
 {
-  "bboxMode": 0,
+  "bboxMode": 2,
   "collisionKind": 1,
   "type": 0,
   "origin": 6,
@@ -7,8 +7,8 @@
   "edgeFiltering": false,
   "collisionTolerance": 0,
   "swfPrecision": 2.525,
-  "bbox_left": 0,
-  "bbox_right": 15,
+  "bbox_left": 3,
+  "bbox_right": 16,
   "bbox_top": 19,
   "bbox_bottom": 47,
   "HTile": false,
@@ -68,10 +68,10 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"d01a916f-beed-431f-8033-7618a08a6803","tags":[],"resourceType":"GMImageLayer",},
   ],
   "nineSlice": {
-    "left": 0,
-    "top": 19,
-    "right": 0,
-    "bottom": 13,
+    "left": 2,
+    "top": 20,
+    "right": 2,
+    "bottom": 14,
     "guideColour": [
       4294902015,
       4294902015,
@@ -82,8 +82,8 @@
     "highlightStyle": 1,
     "enabled": true,
     "tileMode": [
-      1,
       0,
+      1,
       0,
       1,
       1,

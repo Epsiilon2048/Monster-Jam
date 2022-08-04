@@ -1,3 +1,6 @@
+
+obj_lightset.ambient_intensity = 1
+
 stage = stages.grave
 
 guides = false
@@ -11,3 +14,4 @@ init = function(){
 use_depth_map = false
 draw_depth_map = false
 depth_map = -1
+surface = -1

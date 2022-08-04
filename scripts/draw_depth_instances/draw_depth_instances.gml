@@ -1,6 +1,11 @@
 
 function draw_depth_instances(before_script=noscript, after_script=noscript){
 
+if instance_exists(o_stage)
+{
+	exit
+}
+
 for(var i = 0; i <= ds_grid_height(depth_list)-1; i++)
 {
 	with depth_list[# 0, i] 
