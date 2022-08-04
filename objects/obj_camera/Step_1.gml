@@ -19,3 +19,12 @@ if not instance_exists(o_stage) and instance_exists(target)
 	
 	//audio_listener_position(cam_x, cam_y, 0)
 }
+else
+{
+	x = 0
+	y = 0
+	camera_set_view_pos(view_camera[0], 
+		floor(clamp(x-game_width/2, 0, room_width-cam_width)),
+		floor(clamp(y-game_height/2, 0, room_height-cam_height))
+	)
+}

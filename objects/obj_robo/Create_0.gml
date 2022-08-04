@@ -49,7 +49,7 @@ light = instance_create_layer(x, y, "Lights", obj_light, {
 	size: LIGHT_SIZE,
 	str: 0,
 	fov: LIGHT_FOV,
-	parent: self,
 })
+light.parent = self
 
 robo_get_input()

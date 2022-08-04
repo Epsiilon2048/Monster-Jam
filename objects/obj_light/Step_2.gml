@@ -1,4 +1,4 @@
 
-if not rollback_game_running exit
+//if not rollback_game_running exit
 
-a=size+str+24
+//a=size+str+24

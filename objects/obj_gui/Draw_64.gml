@@ -14,6 +14,15 @@ if instance_exists(o_stage)
 	draw_set_color(c_white)
 }
 
+with obj_reset
+{
+	gpu_set_blendmode(bm_subtract)
+	draw_set_color(merge_color(c_black, c_white, max(0, (reset_timer-2*60)/(RESET_TIME-2*60))))
+	draw_rectangle(0, 0, game_width, game_height, false)
+	draw_set_color(c_white)
+	gpu_set_blendmode(bm_normal)
+}
+
 if not instance_exists(obj_local.local_player) or not instance_exists(obj_local.local_player.object)
 {
 	with obj_playersinbutton
