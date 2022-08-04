@@ -1,7 +1,7 @@
 
 function cat_stun(){
 
-if final_form
+if final_form and state != state_mon_jump
 {
 	stun = STUN_TIME_MON
 	cat_switch_state(state_mon_stunned)

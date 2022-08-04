@@ -11,8 +11,10 @@ if spd > 0
 	{
 		spd = 0
 		ring = 0
-		emission_color = 0xE16E5B
+		emission_color = 0xFF6F00
 	}
+	
+	image_speed = spd/7
 }
 else if ring > -1
 {

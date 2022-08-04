@@ -42,9 +42,18 @@ with(obj_robo){
 	Quad(_vb, bbox_left+1, bbox_bottom+1, bbox_right, bbox_bottom+1-3) //Positive Slope Diagonal Wall
 }
 with(obj_cat){
-	Quad(_vb, bbox_left+1, bbox_bottom+1, bbox_right, bbox_bottom+1)
-	Quad(_vb, bbox_left+1, bbox_bottom+1-3, bbox_right, bbox_bottom+1) //Negative Slope Diagonal Wall
-	Quad(_vb, bbox_left+1, bbox_bottom+1, bbox_right, bbox_bottom+1-3) //Positive Slope Diagonal Wall
+	if final_form > 0
+	{
+		Quad(_vb, bbox_left-3, bbox_bottom+1, bbox_right+2, bbox_bottom+1)
+		Quad(_vb, bbox_left-3, bbox_bottom-2, bbox_right+2, bbox_bottom+1) //Negative Slope Diagonal Wall
+		Quad(_vb, bbox_left-3, bbox_bottom+1, bbox_right+2, bbox_bottom-2) //Positive Slope Diagonal Wall
+	}
+	else
+	{
+		Quad(_vb, bbox_left+1, bbox_bottom+1, bbox_right, bbox_bottom+1)
+		Quad(_vb, bbox_left+1, bbox_bottom+1-3, bbox_right, bbox_bottom+1) //Negative Slope Diagonal Wall
+		Quad(_vb, bbox_left+1, bbox_bottom+1, bbox_right, bbox_bottom+1-3) //Positive Slope Diagonal Wall
+	}
 }
 with(obj_scanner){
 	Quad(_vb, bbox_left, bbox_top, bbox_right, bbox_bottom+1) //Negative Slope Diagonal Wall

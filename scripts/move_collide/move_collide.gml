@@ -4,6 +4,8 @@
 ///@param [speed_preservation_factor]
 function move_collide(hsp=0, vsp=0){
 
+if hsp == 0 and vsp == 0 return false
+
 var hblocked = false
 var vblocked = false
 

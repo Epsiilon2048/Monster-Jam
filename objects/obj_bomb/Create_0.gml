@@ -1,3 +1,5 @@
+emission = 0
+z = 0
 
 BLAST_RADIUS = 30
 SPD_LERP = 0.07

@@ -15,5 +15,34 @@ for(var i = 0; i <= ds_list_size(list)-1; i++)
 	with robo robo_switch_state(state_dead)
 }
 
+if ds_list_size(list) 
+{
+	var alive = 0
+	with obj_robo
+	{
+		if state != state_dead
+		{
+			alive ++
+		}
+	}
+
+	if alive == 0
+	{
+		cat_win()
+	}
+	else if player.player_local
+	{
+		set_bar(
+		choose(
+			"GREAT WORK",
+			"EXCELLENT",
+			"GOOD JOB",
+			"INCREDIBLE WORK",
+		),
+		string(alive)+" HUNTER"+((alive == 1) ? "" : "S")+" REMAINING", monster_red
+		)
+	}
+}
+
 ds_list_clear(list)
 }

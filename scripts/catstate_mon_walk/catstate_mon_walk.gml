@@ -39,5 +39,11 @@ if (input.right - input.left) != 0
 
 direction = point_direction(0, 0, input.right - input.left, input.down - input.up)
 
-move_collide_lendir(FORM_SPD, direction)
+var colliding = move_collide_lendir(FORM_SPD, direction) 
+var nodiagonal = direction == 0 or direction == 90 or direction == 180 or direction == 270
+
+if colliding and nodiagonal and not box_colliding(x+lengthdir_x(31, direction), y+lengthdir_y(27, direction))
+{
+	cat_switch_state(state_mon_jump)
+}
 }}

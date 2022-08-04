@@ -7,6 +7,7 @@ var events = [
 	"input",
 	"draw",
 	"gui",
+	"anim_end",
 ]
 
 for(var i = 0; i <= array_length(events)-1; i++)

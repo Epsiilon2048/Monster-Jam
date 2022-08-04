@@ -2,7 +2,7 @@
 function draw_stunned_notice(){
 
 static xx = game_width/2
-static yy = game_height/4
+static yy = game_height/3*2
 
 draw_set_color(monster_red)
 draw_set_font(fnt_text)

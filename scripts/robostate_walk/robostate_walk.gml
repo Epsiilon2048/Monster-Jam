@@ -16,6 +16,12 @@ function robostate_walk_step(robo){ with robo {
 robo_check_flashlight()
 robo_check_bombthrow()
 
+if input.punch_pressed
+{
+	robo_switch_state(state_windup)
+	exit
+}
+
 if not input.move
 {
 	robo_switch_state(state_stand)

@@ -1,3 +1,5 @@
+emission = 1
+z = 0
 
 emission_color = c_white
 

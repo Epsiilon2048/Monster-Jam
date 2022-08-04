@@ -14,6 +14,7 @@ if start_in_rollback
 		my_gui:		[m_axisy_gui],
 		action:		[mb_left],
 		secondary:	[mb_right],
+		punch:		[vk_space],
 	})
 
 	rollback_use_random_input(false)

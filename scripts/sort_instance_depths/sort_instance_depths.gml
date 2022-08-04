@@ -16,7 +16,7 @@ for(var i = 0; i <= array_length(depth_objects)-1; i++)
 	with depth_objects[i]
 	{
 		_depth_list[# 0, yy] = id
-		_depth_list[# 1, yy] = y
+		_depth_list[# 1, yy] = y+z*1000
 		yy++
 	}
 }

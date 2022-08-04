@@ -12,7 +12,7 @@ for(var i = 0; i <= ds_grid_height(depth_list)-1; i++)
 	{
 		before_script()
 		if variable_instance_exists(self, "draw") draw()
-		else draw_self()
+		else draw_sprite_ext(sprite_index, image_index, x, y-z, image_xscale, image_yscale, image_angle, image_blend, image_alpha)
 		after_script()
 	}
 }
@@ -28,14 +28,7 @@ function mask_before_script(){
 
 var local = (object_index == obj_robo or object_index == obj_cat) and instance_exists(player) and player.player_local
 
-if object_index == obj_explosion
-{
-	var e = 1
-}
-else
-{
-	var e = local ? 0.2 : 0
-}
+var e = emission + (local ? 0.2 : 0)
 
 shader_set_uniform_f(global.mask_u_y, (y-cam_y+1)/game_height)
 shauni_color(global.mask_u_emission_color, emission_color, 1, true)
