@@ -1,6 +1,6 @@
 {
-  "option_operagx_version": "1.0.0.17",
-  "option_operagx_next_version": "1.0.0.18",
+  "option_operagx_version": "1.0.0.18",
+  "option_operagx_next_version": "1.0.0.19",
   "option_operagx_game_name": "Monster Jam!",
   "option_operagx_interpolate_pixels": false,
   "option_operagx_scale": 0,

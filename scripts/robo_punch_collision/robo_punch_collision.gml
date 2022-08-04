@@ -20,17 +20,8 @@ if instance_exists(obj_cat) and rectangle_in_rectangle(
 		obj_cat.image_yscale = -1
 		obj_cat.image_speed = 0
 		obj_cat.y -= 16
-		with obj_cat cat_switch_state(state_pause)
-		with obj_robo robo_switch_state(state_pause)
 		
-		if obj_local.local_is_cat
-		{
-			set_bar("THE HUNTERS HAVE CAPTURED YOU", "YOU LOSE", monster_red)
-		}
-		else
-		{
-			set_bar("THE HUNTERS HAVE CAPTURED THE CREATURE", "YOU WIN", hex_to_color(0x31e092))
-		}
+		robos_win()
 	}
 }
 }
