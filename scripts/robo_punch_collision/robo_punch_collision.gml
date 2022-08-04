@@ -24,6 +24,4 @@ if instance_exists(obj_cat) and rectangle_in_rectangle(
 		robos_win()
 	}
 }
-
-robos_win()
 }

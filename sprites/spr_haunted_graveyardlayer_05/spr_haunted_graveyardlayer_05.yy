@@ -24,12 +24,9 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"f3e4931a-3295-4e08-986a-b6ab4dd80b40","path":"sprites/spr_haunted_graveyardlayer_05/spr_haunted_graveyardlayer_05.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"f3e4931a-3295-4e08-986a-b6ab4dd80b40","path":"sprites/spr_haunted_graveyardlayer_05/spr_haunted_graveyardlayer_05.yy",},"LayerId":{"name":"48ab6894-2d17-424c-b105-734fdea56347","path":"sprites/spr_haunted_graveyardlayer_05/spr_haunted_graveyardlayer_05.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_haunted_graveyardlayer_05","path":"sprites/spr_haunted_graveyardlayer_05/spr_haunted_graveyardlayer_05.yy",},"resourceVersion":"1.0","name":"f3e4931a-3295-4e08-986a-b6ab4dd80b40","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceVersion":"1.1","name":"f3e4931a-3295-4e08-986a-b6ab4dd80b40","resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_haunted_graveyardlayer_05","path":"sprites/spr_haunted_graveyardlayer_05/spr_haunted_graveyardlayer_05.yy",},
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 30.0,
@@ -42,7 +39,7 @@
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"bf87639c-343f-409b-b741-3b5e6461cc2d","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"f3e4931a-3295-4e08-986a-b6ab4dd80b40","path":"sprites/spr_haunted_graveyardlayer_05/spr_haunted_graveyardlayer_05.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -58,14 +55,12 @@
     "yorigin": 0,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_haunted_graveyardlayer_05","path":"sprites/spr_haunted_graveyardlayer_05/spr_haunted_graveyardlayer_05.yy",},
     "resourceVersion": "1.4",
     "name": "spr_haunted_graveyardlayer_05",
-    "tags": [],
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"48ab6894-2d17-424c-b105-734fdea56347","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"48ab6894-2d17-424c-b105-734fdea56347","resourceType":"GMImageLayer",},
   ],
   "nineSlice": null,
   "parent": {
@@ -74,6 +69,5 @@
   },
   "resourceVersion": "1.0",
   "name": "spr_haunted_graveyardlayer_05",
-  "tags": [],
   "resourceType": "GMSprite",
 }

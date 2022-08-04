@@ -24,12 +24,9 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"a99bc3b1-75b5-4471-80cf-5ca9f72e205f","path":"sprites/spr_playerportrait/spr_playerportrait.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"a99bc3b1-75b5-4471-80cf-5ca9f72e205f","path":"sprites/spr_playerportrait/spr_playerportrait.yy",},"LayerId":{"name":"a61622d3-aee6-44a7-8fd8-c03d89a9d9af","path":"sprites/spr_playerportrait/spr_playerportrait.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_playerportrait","path":"sprites/spr_playerportrait/spr_playerportrait.yy",},"resourceVersion":"1.0","name":"a99bc3b1-75b5-4471-80cf-5ca9f72e205f","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceVersion":"1.1","name":"a99bc3b1-75b5-4471-80cf-5ca9f72e205f","resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_playerportrait","path":"sprites/spr_playerportrait/spr_playerportrait.yy",},
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 30.0,
@@ -42,7 +39,7 @@
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"bd29bd93-1e71-4174-979d-5cbed0b1d5c0","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"a99bc3b1-75b5-4471-80cf-5ca9f72e205f","path":"sprites/spr_playerportrait/spr_playerportrait.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -58,14 +55,12 @@
     "yorigin": 1,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_playerportrait","path":"sprites/spr_playerportrait/spr_playerportrait.yy",},
     "resourceVersion": "1.4",
     "name": "spr_playerportrait",
-    "tags": [],
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"a61622d3-aee6-44a7-8fd8-c03d89a9d9af","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"a61622d3-aee6-44a7-8fd8-c03d89a9d9af","resourceType":"GMImageLayer",},
   ],
   "nineSlice": null,
   "parent": {
@@ -74,6 +69,5 @@
   },
   "resourceVersion": "1.0",
   "name": "spr_playerportrait",
-  "tags": [],
   "resourceType": "GMSprite",
 }

@@ -1,7 +1,7 @@
 
 function create_player_characters(){ with obj_player {
 	
-if player_id == rollback_cat_player
+if player_id == obj_menuinfo.cat_player
 {
 	object = instance_create_layer(0, 0, "Instances", obj_cat, {player: id})
 	if player_local 

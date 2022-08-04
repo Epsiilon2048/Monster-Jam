@@ -24,12 +24,9 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"3144aa26-bd65-4c66-becc-1c9c0f7c91ba","path":"sprites/s_checkbox_check/s_checkbox_check.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"3144aa26-bd65-4c66-becc-1c9c0f7c91ba","path":"sprites/s_checkbox_check/s_checkbox_check.yy",},"LayerId":{"name":"428c323d-716f-4f59-b7a3-470b499c0a9f","path":"sprites/s_checkbox_check/s_checkbox_check.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"s_checkbox_check","path":"sprites/s_checkbox_check/s_checkbox_check.yy",},"resourceVersion":"1.0","name":"3144aa26-bd65-4c66-becc-1c9c0f7c91ba","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceVersion":"1.1","name":"3144aa26-bd65-4c66-becc-1c9c0f7c91ba","resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
-    "spriteId": {"name":"s_checkbox_check","path":"sprites/s_checkbox_check/s_checkbox_check.yy",},
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 30.0,
@@ -42,7 +39,7 @@
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"c9cd2a6a-7864-47be-b111-b89cca71d58f","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"3144aa26-bd65-4c66-becc-1c9c0f7c91ba","path":"sprites/s_checkbox_check/s_checkbox_check.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -58,14 +55,12 @@
     "yorigin": 0,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"s_checkbox_check","path":"sprites/s_checkbox_check/s_checkbox_check.yy",},
     "resourceVersion": "1.4",
     "name": "s_checkbox_check",
-    "tags": [],
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"428c323d-716f-4f59-b7a3-470b499c0a9f","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"428c323d-716f-4f59-b7a3-470b499c0a9f","resourceType":"GMImageLayer",},
   ],
   "nineSlice": null,
   "parent": {
@@ -74,6 +69,5 @@
   },
   "resourceVersion": "1.0",
   "name": "s_checkbox_check",
-  "tags": [],
   "resourceType": "GMSprite",
 }

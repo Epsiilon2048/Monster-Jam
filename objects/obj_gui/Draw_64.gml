@@ -23,6 +23,8 @@ with obj_reset
 	gpu_set_blendmode(bm_normal)
 }
 
+draw_whos_the_cat()
+
 if not instance_exists(obj_local.local_player) or not instance_exists(obj_local.local_player.object)
 {
 	with obj_playersinbutton

@@ -7,6 +7,5 @@
   },
   "resourceVersion": "1.0",
   "name": "robo_punch_collision",
-  "tags": [],
   "resourceType": "GMScript",
 }

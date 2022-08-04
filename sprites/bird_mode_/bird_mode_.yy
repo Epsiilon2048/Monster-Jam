@@ -24,12 +24,9 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"f3c4066a-6652-4b1c-8332-9c0e15a45374","path":"sprites/bird_mode_/bird_mode_.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"f3c4066a-6652-4b1c-8332-9c0e15a45374","path":"sprites/bird_mode_/bird_mode_.yy",},"LayerId":{"name":"0572c1cc-53d8-419d-9453-b912411975ab","path":"sprites/bird_mode_/bird_mode_.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"bird_mode_","path":"sprites/bird_mode_/bird_mode_.yy",},"resourceVersion":"1.0","name":"f3c4066a-6652-4b1c-8332-9c0e15a45374","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceVersion":"1.1","name":"f3c4066a-6652-4b1c-8332-9c0e15a45374","resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
-    "spriteId": {"name":"bird_mode_","path":"sprites/bird_mode_/bird_mode_.yy",},
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 30.0,
@@ -42,7 +39,7 @@
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"28067901-0536-44bd-b423-3afef79d887d","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"f3c4066a-6652-4b1c-8332-9c0e15a45374","path":"sprites/bird_mode_/bird_mode_.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -58,14 +55,12 @@
     "yorigin": 151,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"bird_mode_","path":"sprites/bird_mode_/bird_mode_.yy",},
     "resourceVersion": "1.4",
     "name": "bird_mode_",
-    "tags": [],
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"0572c1cc-53d8-419d-9453-b912411975ab","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"0572c1cc-53d8-419d-9453-b912411975ab","resourceType":"GMImageLayer",},
   ],
   "nineSlice": null,
   "parent": {
@@ -74,6 +69,5 @@
   },
   "resourceVersion": "1.0",
   "name": "bird_mode_",
-  "tags": [],
   "resourceType": "GMSprite",
 }

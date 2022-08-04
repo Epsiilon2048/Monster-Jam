@@ -24,12 +24,9 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"564540d0-45df-4c8b-9b2f-0d6cfbab3e6f","path":"sprites/spr_robo_green_dead/spr_robo_green_dead.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"564540d0-45df-4c8b-9b2f-0d6cfbab3e6f","path":"sprites/spr_robo_green_dead/spr_robo_green_dead.yy",},"LayerId":{"name":"316ace40-039c-4aec-bb8a-c5f12ef1223b","path":"sprites/spr_robo_green_dead/spr_robo_green_dead.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_robo_green_dead","path":"sprites/spr_robo_green_dead/spr_robo_green_dead.yy",},"resourceVersion":"1.0","name":"564540d0-45df-4c8b-9b2f-0d6cfbab3e6f","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceVersion":"1.1","name":"564540d0-45df-4c8b-9b2f-0d6cfbab3e6f","resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_robo_green_dead","path":"sprites/spr_robo_green_dead/spr_robo_green_dead.yy",},
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 5.0,
@@ -42,7 +39,7 @@
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"1a56c17e-f4e6-49bf-bb2b-7cbb921f74ef","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"564540d0-45df-4c8b-9b2f-0d6cfbab3e6f","path":"sprites/spr_robo_green_dead/spr_robo_green_dead.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -58,14 +55,12 @@
     "yorigin": 88,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_robo_green_dead","path":"sprites/spr_robo_green_dead/spr_robo_green_dead.yy",},
     "resourceVersion": "1.4",
     "name": "spr_robo_green_dead",
-    "tags": [],
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"316ace40-039c-4aec-bb8a-c5f12ef1223b","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"316ace40-039c-4aec-bb8a-c5f12ef1223b","resourceType":"GMImageLayer",},
   ],
   "nineSlice": null,
   "parent": {
@@ -74,6 +69,5 @@
   },
   "resourceVersion": "1.0",
   "name": "spr_robo_green_dead",
-  "tags": [],
   "resourceType": "GMSprite",
 }

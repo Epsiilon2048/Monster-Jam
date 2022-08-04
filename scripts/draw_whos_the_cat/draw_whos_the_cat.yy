@@ -2,10 +2,10 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "Scripts",
-    "path": "folders/Scripts.yy",
+    "name": "GUI",
+    "path": "folders/GUI.yy",
   },
   "resourceVersion": "1.0",
-  "name": "create_player_characters",
+  "name": "draw_whos_the_cat",
   "resourceType": "GMScript",
 }
