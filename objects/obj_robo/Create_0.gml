@@ -21,10 +21,10 @@ bombs_out = 0
 LIGHT_FOV = 100
 LIGHT_COLOR = hex_to_color(0xfff1bf)
 LIGHT_SIZE = 350
-//light.fov = LIGHT_FOV
-//light.color = LIGHT_COLOR
-//light.size = LIGHT_SIZE
-//light.dir = 0
+light_fov = LIGHT_FOV
+light_color = LIGHT_COLOR
+light_size = LIGHT_SIZE
+light_dir = 0
 
 FOOTSTEP_INTERVAL = 26
 footstep = 0
@@ -44,12 +44,12 @@ with obj_robospawn if not spawned
 
 flashlight = true
 
-light = instance_create_layer(x, y, "Lights", obj_light, {
-	color: LIGHT_COLOR,
-	size: LIGHT_SIZE,
-	str: 0,
-	fov: LIGHT_FOV,
-})
-light.parent = self
+//light = instance_create_layer(x, y, "Lights", obj_light, {
+//	color: LIGHT_COLOR,
+//	size: LIGHT_SIZE,
+//	str: 0,
+//	fov: LIGHT_FOV,
+//})
+//light.parent = self
 
 robo_get_input()

@@ -17,7 +17,7 @@ repeat orbs
 {
 	var i = (list1[index1]+list2[index2]) mod ds_list_size(list)
 	var spawn = list[| i]
-	instance_create_layer(spawn.x, spawn.y, "Instances", obj_orb)
+	create_orb(spawn)
 	ds_list_delete(list, i)
 	
 	index1 = (index1+1) mod array_length(list1)

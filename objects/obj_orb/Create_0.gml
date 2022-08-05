@@ -1,7 +1,6 @@
 emission = 0
 z = 0
 
-step = 0
 emission_color = c_white
 dying = false
 

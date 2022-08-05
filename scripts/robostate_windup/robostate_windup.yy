@@ -7,6 +7,5 @@
   },
   "resourceVersion": "1.0",
   "name": "robostate_windup",
-  "tags": [],
   "resourceType": "GMScript",
 }

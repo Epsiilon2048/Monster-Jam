@@ -7,6 +7,5 @@
   },
   "resourceVersion": "1.0",
   "name": "draw_depth_instances",
-  "tags": [],
   "resourceType": "GMScript",
 }

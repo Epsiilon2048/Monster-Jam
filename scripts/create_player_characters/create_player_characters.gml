@@ -24,7 +24,8 @@ if player_id == obj_menuinfo.cat_player
 else
 {
 	object = instance_create_layer(0, 0, "Instances", obj_robo, {player: id})
-	//instance_create_layer(0, 0, "Instances", obj_flashlight, {parent: object})
+	instance_create_layer(0, 0, "Instances", obj_flashlight, {parent: object})
+	
 	if player_local 
 	{
 		instance_create_layer(0, 0, "Instances", obj_crewlight, {parent: object})

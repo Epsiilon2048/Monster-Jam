@@ -54,12 +54,12 @@ surface_set_target(light_surface)
 draw_clear_alpha(c_black, 0)
 gpu_set_ztestenable(true)
 gpu_set_zwriteenable(true)
-var z = 0
 
+var z = 0
 var l = obj_light
 repeat 2
 {
-	with(l){
+	with(l) if on {
 		//Draw the shadows (AKA light blockers)
 		if shadows
 		{

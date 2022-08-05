@@ -3,9 +3,9 @@
   "isCompatibility": false,
   "parent": {
     "name": "Scripts",
-    "path": "folders/Robo/Scripts.yy",
+    "path": "folders/Scripts.yy",
   },
   "resourceVersion": "1.0",
-  "name": "robo_point_light",
+  "name": "create_orb",
   "resourceType": "GMScript",
 }

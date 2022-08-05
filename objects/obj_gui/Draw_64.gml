@@ -86,6 +86,11 @@ else
 	// Kitty GUI
 	else if instance_exists(obj_cat)
 	{	
+		if obj_cat.stun > 0
+		{
+			draw_stunned_notice()
+		}
+		
 		if obj_cat.final_form > 0 
 		{
 			draw_monster_bar()
@@ -93,11 +98,7 @@ else
 		}
 		else
 		{
-			if obj_cat.stun > 0
-			{
-				draw_stunned_notice()
-			}
-			else 
+			if obj_cat.stun <= 0
 			{
 				var detected = false
 				with obj_scanner

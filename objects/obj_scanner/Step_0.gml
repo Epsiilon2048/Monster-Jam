@@ -2,20 +2,18 @@
 if not rollback_game_running exit
 
 direction += SPD
-light.dir = direction
-
-light.x = x+lengthdir_x(3, direction)
-light.y = y+lengthdir_y(3, direction)
 
 if instance_exists(obj_cat) and SIGNAL_RANGE >= point_distance(x, y, obj_cat.x, obj_cat.y)
 {
 	var pass = false
 	
-	var x2 = x+lengthdir_x(SIGNAL_RANGE, light.dir-light.fov/2)
-	var y2 = y+lengthdir_y(SIGNAL_RANGE, light.dir-light.fov/2)
-					 
-	var x3 = x+lengthdir_x(SIGNAL_RANGE, light.dir+light.fov/2)
-	var y3 = y+lengthdir_y(SIGNAL_RANGE, light.dir+light.fov/2)
+	var d1 = direction-FOV/2
+	var x2 = x+lengthdir_x(SIGNAL_RANGE, d1)
+	var y2 = y+lengthdir_y(SIGNAL_RANGE, d1)
+
+	var d2 = direction+FOV/2
+	var x3 = x+lengthdir_x(SIGNAL_RANGE, d2)
+	var y3 = y+lengthdir_y(SIGNAL_RANGE, d2)
 	
 	if	instance_exists(collision_line(x, y, x2, y2, obj_cat, false, true)) or
 		instance_exists(collision_line(x, y, x3, y3, obj_cat, false, true))

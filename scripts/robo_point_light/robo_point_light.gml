@@ -10,7 +10,7 @@ accuracy = abs(accuracy - 1.0)
 
 // Get the obj_cursor direction and facing direction
 var cursor_dir = point_direction(x, y, input.mx, input.my)
-var facingDir = light.dir
+var facingDir = light_dir
 
 // Calculate the difference between obj_cursor direction and facing direction
 var facingMinusobj_cursor = facingDir - cursor_dir
@@ -29,7 +29,7 @@ if(abs(facingMinusobj_cursor) > 180)
 
 // Gradually rotate object
 var prev_dir = direction
-direction = light.dir
+direction = light_dir
 
 var dot = abs(angleDiff)/360*turnSpeed
 
@@ -43,9 +43,9 @@ else if(angleDiff < leastAccurateAim * accuracy)
     direction += dot
 }
 
-light.x = x+lengthdir_x(7, direction)
-light.y = y+lengthdir_y(7, direction)
-light.dir = direction
+//light.x = x+lengthdir_x(7, direction)
+//light.y = y+lengthdir_y(7, direction)
+light_dir = direction
 direction = prev_dir
 
 if input.mx != x

@@ -29,9 +29,10 @@ function mask_before_script(){
 var local = (object_index == obj_robo or object_index == obj_cat) and instance_exists(player) and player.player_local
 
 var e = emission + (local ? 0.2 : 0)
+var c = emission_color
 
 shader_set_uniform_f(global.mask_u_y, (y-cam_y+1)/game_height)
-shauni_color(global.mask_u_emission_color, emission_color, 1, true)
+shader_set_uniform_f(global.mask_u_emission_color, color_get_red(c)/255, color_get_green(c)/255, color_get_blue(c)/255, 1)
 shader_set_uniform_f(global.mask_u_emission_add, e)
 
 var tex = sprite_get_texture(sprite_index, image_index)
