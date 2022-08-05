@@ -26,9 +26,12 @@ with obj_player
 
 yy += ch+3
 
+var r = "Random"
+if instance_number(obj_player) <= 1 r = "No one"
+
 random_mouse_on = not is_random and point_in_rectangle(
 	obj_menuinfo.input.mx, obj_menuinfo.input.my, 
-	xx, yy+4, xx+string_width("Random"), yy+ch
+	xx, yy+4, xx+string_width(r), yy+ch
 )
 
 if random_mouse_on and obj_menuinfo.input.action_pressed 

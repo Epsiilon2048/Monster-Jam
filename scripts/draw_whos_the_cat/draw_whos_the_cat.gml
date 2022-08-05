@@ -23,9 +23,12 @@ with obj_player
 }
 
 yy += ch+3
+var r = "Random"
+if instance_number(obj_player) <= 1 r = "No one"
+
 if is_random draw_set_color(monster_red)
 else if random_mouse_on draw_set_color(c_gray)
-draw_text(x, yy, "Random")
+draw_text(x, yy, r)
 draw_set_color(c_white)
 
 }}
