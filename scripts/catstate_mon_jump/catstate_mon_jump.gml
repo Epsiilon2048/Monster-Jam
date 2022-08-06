@@ -15,14 +15,14 @@ function catstate_mon_jump_step(){ with obj_cat {
 
 cat_increment_form_timer()
 
-z = JUMP_HEIGHT*animcurve_channel_evaluate(jump_curve, min(1, jump/JUMP_DIST))
+z = MON_JUMP_HEIGHT*animcurve_channel_evaluate(jump_curve, min(1, jump/MON_JUMP_DIST))
 
-x += lengthdir_x(JUMP_SPD, direction)
-y += lengthdir_y(JUMP_SPD, direction)
+x += lengthdir_x(MON_JUMP_SPD, direction)
+y += lengthdir_y(MON_JUMP_SPD, direction)
 
-jump += JUMP_SPD
+jump += MON_JUMP_SPD
 
-if jump >= JUMP_DIST and not box_colliding(x, y)
+if jump >= MON_JUMP_DIST and not box_colliding(x, y)
 {
 	cat_switch_state(state_mon_stand)
 	z = 0

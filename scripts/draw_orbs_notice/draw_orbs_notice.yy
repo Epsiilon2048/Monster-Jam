@@ -7,6 +7,5 @@
   },
   "resourceVersion": "1.0",
   "name": "draw_orbs_notice",
-  "tags": [],
   "resourceType": "GMScript",
 }

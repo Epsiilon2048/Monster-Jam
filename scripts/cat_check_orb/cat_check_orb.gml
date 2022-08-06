@@ -10,10 +10,10 @@ if instance_exists(orb) and not orb.dying
 	orb.fov = 0
 	instance_destroy(orb)
 	
-	if orbs >= ORBS_FOR_FORM
+	if orbs >= MON_ORBS
 	{
 		orbs = 0
-		final_form = FINAL_FORM_TIME
+		final_form = MON_FORM_TIME
 		cat_toggle_catvision(true)
 		
 		with obj_orb
@@ -39,7 +39,7 @@ if instance_exists(orb) and not orb.dying
 	}
 	else if player.player_local
 	{
-		var num = ORBS_FOR_FORM-orbs
+		var num = MON_ORBS-orbs
 		set_bar(stitch(num," ORB",((num == 1) ? "" : "S")," REMAINING"))
 	}
 }

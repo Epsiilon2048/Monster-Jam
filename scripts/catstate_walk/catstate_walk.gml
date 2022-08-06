@@ -36,9 +36,9 @@ if (input.right - input.left) != 0
 
 direction = point_direction(0, 0, input.right - input.left, input.down - input.up)
 
-move_collide(lengthdir_x(SPD, direction), lengthdir_y(SPD, direction))
+move_collide(lengthdir_x(CAT_SPD, direction), lengthdir_y(CAT_SPD, direction))
 
-if not (footstep mod FOOTSTEP_INTERVAL)
+if not (footstep mod CAT_FOOTSTEP_INTERVAL)
 {
 	play_sound_for_player(player.player_id, 
 		choose(

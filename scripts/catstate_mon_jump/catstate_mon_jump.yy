@@ -7,6 +7,5 @@
   },
   "resourceVersion": "1.0",
   "name": "catstate_mon_jump",
-  "tags": [],
   "resourceType": "GMScript",
 }

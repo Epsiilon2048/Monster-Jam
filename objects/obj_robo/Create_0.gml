@@ -18,15 +18,16 @@ stun = 0
 BOMBS = 2
 bombs_out = 0
 
-LIGHT_FOV = 100
-LIGHT_COLOR = hex_to_color(0xfff1bf)
-LIGHT_SIZE = 350
-light_fov = LIGHT_FOV
-light_color = LIGHT_COLOR
-light_size = LIGHT_SIZE
+#macro ROBO_LIGHT_FOV 100
+#macro ROBO_LIGHT_COLOR 0xBFF1FF
+#macro ROBO_LIGHT_SIZE 350
+#macro ROBO_FOOTSTEP_INTERVAL 26
+
+light_fov = ROBO_LIGHT_FOV
+light_color = ROBO_LIGHT_COLOR
+light_size = ROBO_LIGHT_SIZE
 light_dir = 0
 
-FOOTSTEP_INTERVAL = 26
 footstep = 0
 
 EMISSION_COLOR = 0xE13742
@@ -42,14 +43,8 @@ with obj_robospawn if not spawned
 	break
 }
 
-flashlight = true
+dead = false
 
-//light = instance_create_layer(x, y, "Lights", obj_light, {
-//	color: LIGHT_COLOR,
-//	size: LIGHT_SIZE,
-//	str: 0,
-//	fov: LIGHT_FOV,
-//})
-//light.parent = self
+flashlight = true
 
 robo_get_input()

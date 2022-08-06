@@ -17,5 +17,5 @@ for(var i = 0; i <= array_length(events)-1; i++)
 	self[$ events[i]] = scr
 }
 
-self.name = name
+//self.name = name
 }

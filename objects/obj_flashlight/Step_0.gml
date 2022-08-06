@@ -1,12 +1,13 @@
 
 if not instance_exists(parent)
 {
+	instance_destroy()
 	exit
 }
 
 on = parent.flashlight
 
-if on and parent.state != parent.state_dead
+if on and not parent.dead
 {
 	var turnSpeed = 30
 	var accuracy = .95    // Don't want perfect accuracy or perfect inaccuracy

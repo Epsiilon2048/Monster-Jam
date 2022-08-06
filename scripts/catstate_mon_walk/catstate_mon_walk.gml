@@ -41,7 +41,7 @@ if (input.right - input.left) != 0
 
 direction = point_direction(0, 0, input.right - input.left, input.down - input.up)
 
-var colliding = move_collide_lendir(FORM_SPD, direction) 
+var colliding = move_collide_lendir(MON_SPD, direction) 
 var nodiagonal = direction == 0 or direction == 90 or direction == 180 or direction == 270
 
 if colliding and nodiagonal and not box_colliding(x+lengthdir_x(31, direction), y+lengthdir_y(27, direction))
@@ -49,7 +49,7 @@ if colliding and nodiagonal and not box_colliding(x+lengthdir_x(31, direction), 
 	cat_switch_state(state_mon_jump)
 }
 
-if not (footstep mod FORM_FOOTSTEP_INTERVAL)
+if not (footstep mod MON_FOOTSTEP_INTERVAL)
 {
 	play_sound_for_player(player.player_id, 
 		choose(

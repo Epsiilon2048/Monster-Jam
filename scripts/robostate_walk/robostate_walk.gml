@@ -34,7 +34,7 @@ direction = point_direction(0, 0, input.right - input.left, input.down - input.u
 
 move_collide(lengthdir_x(SPD, direction), lengthdir_y(SPD, direction))
 
-if not (footstep mod FOOTSTEP_INTERVAL)
+if not (footstep mod ROBO_FOOTSTEP_INTERVAL)
 {
 	play_sound_for_player(player.player_id, 
 		choose(

@@ -67,7 +67,7 @@ else
 	if not obj_local.local_is_cat
 	{
 		var obj = obj_local.local_player.object
-		if obj.state.name == "dead"
+		if obj.dead
 		{
 			draw_you_dead_lol()
 		}

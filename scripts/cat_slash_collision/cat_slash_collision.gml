@@ -20,7 +20,7 @@ if ds_list_size(list)
 	var alive = 0
 	with obj_robo
 	{
-		if state != state_dead
+		if not dead
 		{
 			alive ++
 		}

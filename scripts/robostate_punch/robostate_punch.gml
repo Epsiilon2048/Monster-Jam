@@ -29,15 +29,15 @@ var lp = image_index/image_number
 lp *= lp
 
 emission = 1-lp
-light_color = merge_color(EMISSION_COLOR, LIGHT_COLOR, lp)
-light_size = lerp(1000, LIGHT_SIZE, lp)
-light_fov = lerp(80, LIGHT_FOV, lp)
+light_color = merge_color(EMISSION_COLOR, ROBO_LIGHT_COLOR, lp)
+light_size = lerp(1000, ROBO_LIGHT_SIZE, lp)
+light_fov = lerp(80, ROBO_LIGHT_FOV, lp)
 }}
 
 
 function robostate_punch_anim_end(robo){ with robo {
 
 emission = 0
-light_color = LIGHT_COLOR
+light_color = ROBO_LIGHT_COLOR
 robo_switch_state(state_stand)
 }}
