@@ -5,10 +5,10 @@ step ++
 //Z coordinate is used as a flag to determine if the vertex will be repositioned in the shader
 function Quad(_vb, _x1, _y1, _x2, _y2){
 	//Upper triangle
-	_x1 = floor(_x1)
-	_y1 = floor(_y1)
-	_x2 = floor(_x2)
-	_y2 = floor(_y2)
+	//_x1 = floor(_x1)
+	//_y1 = floor(_y1)
+	//_x2 = floor(_x2)
+	//_y2 = floor(_y2)
 	
 	vertex_position_3d(_vb, _x1, _y1, 0)//0)
 	vertex_position_3d(_vb, _x1, _y1, 1)//2) //repositioned vertex

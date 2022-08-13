@@ -72,7 +72,6 @@ repeat 2
 	
 		//Draw the Light
 		gpu_set_blendmode(bm_add)
-		//gpu_set_blendmode_ext_sepalpha(bm_inv_dest_alpha, bm_one, bm_zero, bm_zero)
 		shader_set(shd_light)
 		shauni_color(global.light_u_color, color, , true)
 		shader_set_uniform_f(global.light_u_pos, x, y)
@@ -115,10 +114,3 @@ shauni_surface("u_light", light_surface)
 shauni_surface("u_mask", mask_surface)
 draw_surface(depth_surface, vx, vy)
 shader_reset()
-
-//shader_set(shd_lightmix)
-//shauni_surface("u_light", light_surface)
-//shauni_surface("u_mask", mask_surface)
-//draw_surface(application_surface, vx, vy)
-//shader_reset()
-//gpu_set_blendmode(bm_normal)

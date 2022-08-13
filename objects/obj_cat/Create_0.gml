@@ -21,7 +21,7 @@ jump_curve = animcurve_get_channel(cat_curve, "jump")
 #macro MON_JUMP_SPD 1
 #macro MON_FORM_TIME 1440 // 24 seconds
 #macro MON_SPD 1.5
-#macro MON_ORBS 3
+#macro MON_ORBS 1
 #macro CAT_FOOTSTEP_INTERVAL 8
 #macro MON_FOOTSTEP_INTERVAL 33
 

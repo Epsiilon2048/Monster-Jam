@@ -1,4 +1,7 @@
 
+x=0
+y=0
+
 obj_lightset.ambient_intensity = 1
 
 stage = stages.grave

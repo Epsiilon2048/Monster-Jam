@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMObject",
+  "resourceVersion": "1.0",
+  "name": "obj_orblight",
   "spriteId": null,
   "solid": false,
   "visible": true,
@@ -22,19 +25,16 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
-    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"resourceVersion":"1.0","name":"","resourceType":"GMEvent",},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,},
   ],
   "properties": [],
   "overriddenProperties": [
-    {"propertyId":{"name":"color","path":"objects/obj_locallight/obj_locallight.yy",},"objectId":{"name":"obj_locallight","path":"objects/obj_locallight/obj_locallight.yy",},"value":"$FF7070FF","resourceVersion":"1.0","name":"","resourceType":"GMOverriddenProperty",},
-    {"propertyId":{"name":"size","path":"objects/obj_locallight/obj_locallight.yy",},"objectId":{"name":"obj_locallight","path":"objects/obj_locallight/obj_locallight.yy",},"value":"50","resourceVersion":"1.0","name":"","resourceType":"GMOverriddenProperty",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"color","path":"objects/obj_locallight/obj_locallight.yy",},"objectId":{"name":"obj_locallight","path":"objects/obj_locallight/obj_locallight.yy",},"value":"$FF7070FF",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"size","path":"objects/obj_locallight/obj_locallight.yy",},"objectId":{"name":"obj_locallight","path":"objects/obj_locallight/obj_locallight.yy",},"value":"50",},
   ],
   "parent": {
     "name": "Special lights",
     "path": "folders/Visuals/Special lights.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "obj_orblight",
-  "resourceType": "GMObject",
 }

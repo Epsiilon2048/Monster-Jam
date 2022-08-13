@@ -70,6 +70,8 @@ depth_objects = [
 	obj_orb,
 	obj_bomb,
 	obj_explosion,
+	obj_deco,
+	obj_orbspawn,
 ]
 
 step = 0

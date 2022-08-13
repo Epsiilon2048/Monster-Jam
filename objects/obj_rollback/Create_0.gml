@@ -23,5 +23,5 @@ if start_in_rollback
 		rollback_create_game(4, rollback_testing,)// "North America")
 	}
 	
-	room_goto(rm_level)
+	room_goto_next()
 }

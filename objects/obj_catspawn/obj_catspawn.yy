@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMObject",
+  "resourceVersion": "1.0",
+  "name": "obj_catspawn",
   "spriteId": {
     "name": "spr_catspawn",
     "path": "sprites/spr_catspawn/spr_catspawn.yy",
@@ -28,8 +31,4 @@
     "name": "Cat",
     "path": "folders/Cat.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "obj_catspawn",
-  "tags": [],
-  "resourceType": "GMObject",
 }
