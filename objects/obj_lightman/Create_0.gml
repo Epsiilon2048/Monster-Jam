@@ -72,6 +72,7 @@ depth_objects = [
 	obj_explosion,
 	obj_deco,
 	obj_orbspawn,
+	obj_wallgrass,
 ]
 
 step = 0

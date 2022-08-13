@@ -21,6 +21,19 @@ s = read_surface
 read_surface = write_surface
 write_surface = s
 
+//if obj_local.local_is_cat
+{
+	surface_set_target(write_surface)
+	shader_set(shd_kitty)
+	draw_surface(read_surface, 0, 0)
+	shader_reset()
+	surface_reset_target()
+	
+	s = read_surface
+	read_surface = write_surface
+	write_surface = s
+}
+
 if	not obj_local.local_is_cat and instance_exists(obj_local.local_player) and instance_exists(obj_local.local_player.object) 
 	and obj_local.local_player.object.dead
 {
@@ -39,7 +52,7 @@ else
 	shader_set(shd_chrab)
 	shauni("u_dist", 1)
 	shauni("u_texel", 1/win_width, 1/win_height)
-	shauni("u_wave_time", step/pi/15)
+	shauni("u_wave_time", step/pi/7)
 	shauni("u_wave_intensity", obj_local.local_is_cat and instance_exists(obj_cat) and obj_cat.final_form)
 	shauni("u_cam_y", cam_y)
 }

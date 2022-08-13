@@ -80,9 +80,9 @@
     "highlightStyle": 1,
     "enabled": true,
     "tileMode": [
-      0,
       1,
-      0,
+      1,
+      1,
       1,
       1,
     ],
