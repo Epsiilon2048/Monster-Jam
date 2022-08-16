@@ -1,7 +1,7 @@
 
 function robostate_punch_initialize(robo){ with robo {
 
-sprite_index = spr_robo_green_punch
+sprite_index = sprite_punch
 image_index = 0
 emission_color = EMISSION_COLOR
 robo_toggle_flashlight(true)

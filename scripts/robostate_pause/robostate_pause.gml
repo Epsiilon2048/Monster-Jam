@@ -10,5 +10,5 @@ function robostate_pause_step(robo){ with robo {
 
 function robostate_pause_anim_end(robo){ with robo {
 
-if sprite_index != spr_robo_green_dead sprite_index = spr_robo_green
+if sprite_index != sprite_dead sprite_index = sprite_stand
 }}

@@ -10,6 +10,16 @@ state_punch = new Robostate("punch")
 state_stunned = new Robostate("stunned")
 state_dead = new Robostate("dead")
 
+robo_add_sprites([
+	"stand",
+	"walk",
+	"windup",
+	"punch",
+	"dead",
+])
+
+emission_color = EMISSION_COLOR
+
 SPD = 1.3
 
 STUN_TIME = 3*60
@@ -29,9 +39,6 @@ light_size = ROBO_LIGHT_SIZE
 light_dir = 0
 
 footstep = 0
-
-EMISSION_COLOR = 0xE13742
-emission_color = EMISSION_COLOR
 
 robo_switch_state(state_stand)
 

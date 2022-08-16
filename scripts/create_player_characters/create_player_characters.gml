@@ -1,16 +1,26 @@
 
+global.namecolors = {
+	indigo: hex_to_color(0x4237E1),
+	ocean: hex_to_color(0x4bee6f),
+	bumblebee: hex_to_color(0xf4f640),
+	fuchsia: hex_to_color(0xe264f0),
+}
+
 function create_player_characters(){ with obj_player {
 	
 if player_id == obj_menuinfo.cat_player
 {
 	object = instance_create_layer(0, 0, "Instances", obj_cat, {player: id})
+	
+	var roll = irandom(6)
+	
 	if player_local 
 	{
 		instance_create_layer(0, 0, "Instances", obj_catlight, {parent: object})
 		
 		set_bar(
 			"You are the DIVINE CREATURE", 
-			(irandom(6) == 1) ? "Absorb ORBS to reach TRUE FORB" : "Absorb ORBS to reach your TRUE FORM",
+			(roll == 1) ? "Absorb ORBS to reach TRUE FORB" : "Absorb ORBS to reach your TRUE FORM",
 			monster_red
 		)
 		obj_gui.bar_time = -2.5*60-140
@@ -23,7 +33,11 @@ if player_id == obj_menuinfo.cat_player
 }
 else
 {
-	object = instance_create_layer(0, 0, "Instances", obj_robo, {player: id})
+	object = instance_create_layer(0, 0, "Instances", obj_robo, {
+		player: id,
+		colorname: "bumblebee",
+		EMISSION_COLOR: global.namecolors[$ "bumblebee"],
+	})
 	instance_create_layer(0, 0, "Instances", obj_flashlight, {parent: object})
 	
 	if player_local 

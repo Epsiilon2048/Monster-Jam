@@ -23,8 +23,8 @@ void main()
 	frag.rgb *= vignette;
 	//frag.rgb = vec3(1.0-vignette);
 	
-	frag.rgb *= vec3(1.3, 1.1, 0.85);
-	frag.rgb += vec3(0.01, 0.015, 0.025);
+	//frag.rgb *= vec3(1.30, 1.10, 1.00);
+	//frag.rgb += vec3(0.004, 0.007, 0.010);
 	
 	gl_FragColor = frag;
 }

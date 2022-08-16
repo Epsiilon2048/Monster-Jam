@@ -31,7 +31,7 @@ with obj_player
 		yy += ch-3
 		if obj_menuinfo.cat_player == player_id draw_set_color(monster_red)
 		else if mouse_on_button draw_set_color(c_gray)
-		draw_text(xx, yy, singleplayer ? "hunter" : string_lower(player_name))
+		draw_text(xx, yy, singleplayer ? "creature" : string_lower(player_name))
 		draw_set_color(c_white)
 	}
 	else
@@ -56,13 +56,13 @@ with obj_player
 		yy += 19
 		if obj_menuinfo.cat_player == player_id draw_set_color(monster_red)
 		else if mouse_on_button draw_set_color(c_gray)
-		draw_text(xx, yy, singleplayer ? "hunter" : string_lower(player_name))
+		draw_text(xx, yy, string_lower(player_name))
 		draw_set_color(c_white)
 	}
 }
 
 yy += ch+3
-var r = singleplayer ? "creature" : "random"
+var r = singleplayer ? "hunter" : "random"
 
 if is_random draw_set_color(monster_red)
 else if random_mouse_on draw_set_color(c_gray)

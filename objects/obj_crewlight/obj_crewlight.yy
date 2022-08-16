@@ -36,7 +36,7 @@
     {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"str","path":"objects/obj_light/obj_light.yy",},"objectId":{"name":"obj_light","path":"objects/obj_light/obj_light.yy",},"value":"0.5",},
     {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"color","path":"objects/obj_locallight/obj_locallight.yy",},"objectId":{"name":"obj_locallight","path":"objects/obj_locallight/obj_locallight.yy",},"value":"$FF162D16",},
     {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"size","path":"objects/obj_locallight/obj_locallight.yy",},"objectId":{"name":"obj_locallight","path":"objects/obj_locallight/obj_locallight.yy",},"value":"50",},
-    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"str","path":"objects/obj_locallight/obj_locallight.yy",},"objectId":{"name":"obj_locallight","path":"objects/obj_locallight/obj_locallight.yy",},"value":"-5",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"str","path":"objects/obj_locallight/obj_locallight.yy",},"objectId":{"name":"obj_locallight","path":"objects/obj_locallight/obj_locallight.yy",},"value":"-1",},
   ],
   "parent": {
     "name": "Special lights",

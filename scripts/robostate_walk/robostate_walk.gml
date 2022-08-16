@@ -1,7 +1,7 @@
 
 function robostate_walk_initialize(robo){ with robo {
 
-sprite_index = spr_robo_green_walk
+sprite_index = sprite_walk
 image_index = 0
 footstep = 0
 }}
