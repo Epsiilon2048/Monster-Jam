@@ -21,3 +21,5 @@ surface = -1
 
 _mx = 0
 _my = 0
+_cam_x = 0
+_cam_y = 0

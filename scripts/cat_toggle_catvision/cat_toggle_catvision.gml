@@ -4,7 +4,7 @@ function cat_toggle_catvision(on=not catvision){
 catvision = on
 if catvision
 {
-	emission_color = hex_to_color(0xE13744)
+	emission_color = morgan ? MORGAN_EMISSION_COLOR : CAT_EMISSION_COLOR
 }
 else
 {

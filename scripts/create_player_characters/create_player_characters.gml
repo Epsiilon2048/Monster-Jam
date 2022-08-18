@@ -17,9 +17,10 @@ if player_id == obj_menuinfo.cat_player
 	if player_local 
 	{
 		instance_create_layer(0, 0, "Instances", obj_catlight, {parent: object})
+		instance_create_layer(0, 0, "Instances", obj_catambient, {parent: object})
 		
 		set_bar(
-			"You are the DIVINE CREATURE", 
+			cat_is_morgan ? "You are MORGAN" : "You are the DIVINE CREATURE", 
 			(roll == 1) ? "Absorb ORBS to reach TRUE FORB" : "Absorb ORBS to reach your TRUE FORM",
 			monster_red
 		)
@@ -38,6 +39,7 @@ else
 		colorname: "bumblebee",
 		EMISSION_COLOR: global.namecolors[$ "bumblebee"],
 	})
+	
 	instance_create_layer(0, 0, "Instances", obj_flashlight, {parent: object})
 	
 	if player_local 
@@ -50,7 +52,7 @@ else
 		
 		set_bar(
 			"You are a HUNTER OF THE DARK", 
-			"Entrap the creature before it TAKES FORM",
+			cat_is_morgan ? "Entrap morgan before it TAKES FORM" : "Entrap the creature before it TAKES FORM",
 		)
 		instance_destroy(o_stage)
 		camera_set_following(object, true)

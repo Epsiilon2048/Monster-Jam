@@ -12,6 +12,7 @@ for(var i = 0; i <= ds_grid_height(depth_list)-1; i++)
 	{
 		before_script()
 		if variable_instance_exists(self, "draw") draw()
+		else if z == 0 draw_self()
 		else draw_sprite_ext(sprite_index, image_index, x, y-z, image_xscale, image_yscale, image_angle, image_blend, image_alpha)
 		after_script()
 	}
@@ -31,7 +32,7 @@ var local = (object_index == obj_robo or object_index == obj_cat) and instance_e
 var e = emission + (local ? 0.2 : 0)
 var c = emission_color
 
-shader_set_uniform_f(global.mask_u_y, (y-cam_y+1)/game_height)
+shader_set_uniform_f(global.mask_u_y, (y-cam_y)/game_height)
 shader_set_uniform_f(global.mask_u_emission_color, color_get_red(c)/255, color_get_green(c)/255, color_get_blue(c)/255, 1)
 shader_set_uniform_f(global.mask_u_emission_add, e)
 

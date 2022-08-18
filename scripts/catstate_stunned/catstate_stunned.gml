@@ -1,7 +1,7 @@
 
 function catstate_stunned_initialize(){ with obj_cat {
 
-sprite_index = spr_cat
+sprite_index = morgan ? spr_morgan : spr_cat
 }}
 
 

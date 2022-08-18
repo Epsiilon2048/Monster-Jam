@@ -1,7 +1,7 @@
 
 function catstate_mon_jump_initialize(){ with obj_cat {
 
-sprite_index = spr_monster
+sprite_index = morgan ? spr_morgster : spr_monster
 jump = 0
 }}
 

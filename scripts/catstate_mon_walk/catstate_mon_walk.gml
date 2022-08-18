@@ -1,7 +1,7 @@
 
 function catstate_mon_walk_initialize(){ with obj_cat {
 
-sprite_index = spr_monster_walk
+sprite_index = morgan ? spr_morgster_walk : spr_monster_walk
 image_index = 0
 footstep = 0
 }}

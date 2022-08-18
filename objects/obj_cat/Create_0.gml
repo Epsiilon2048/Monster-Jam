@@ -1,3 +1,10 @@
+
+morgan = true
+sprite_index = morgan ? spr_morgan : spr_cat 
+
+#macro CAT_EMISSION_COLOR 0x4437E1
+#macro MORGAN_EMISSION_COLOR 0x10D2F9
+
 emission = 0
 z = 0
 

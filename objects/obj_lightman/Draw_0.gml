@@ -2,25 +2,13 @@ var _vb = vb
 var _vx = vx
 var _vy = vy
 
-if not surface_exists(light_surface)
-{
-	light_surface = surface_create(game_width, game_height)
-}
-
-if not surface_exists(mask_surface)
-{
-	mask_surface = surface_create(game_width, game_height)
-}
-
-if not surface_exists(depth_surface)
-{
-	depth_surface = surface_create(game_width, game_height)
-}
-
-if not surface_exists(buffer_surface)
-{
-	buffer_surface = surface_create(game_width, game_height)
-}
+var se = surface_exists
+var sc = surface_create
+if !se(light_surface)	light_surface	= sc(game_width, game_height)
+if !se(mask_surface)	mask_surface	= sc(game_width, game_height)
+if !se(depth_surface)	depth_surface	= sc(game_width, game_height)
+if !se(buffer_surface)	buffer_surface	= sc(game_width, game_height)
+if !se(blank_surface)	blank_surface	= sc(1, 1)
 
 sort_instance_depths()
 
@@ -55,9 +43,11 @@ draw_clear_alpha(c_black, 0)
 gpu_set_ztestenable(true)
 gpu_set_zwriteenable(true)
 
+var mask_tex = surface_get_texture(mask_surface)
+var blank_tex = surface_get_texture(blank_surface)
 var z = 0
-var l = obj_light
-repeat 2
+var l = obj_locallight
+repeat 1
 {
 	with(l) if on {
 		//Draw the shadows (AKA light blockers)
@@ -86,13 +76,13 @@ repeat 2
 		shader_set_uniform_f(global.light_diffusion, obj_lightset.diffusion)
 	
 		//shauni_surface(u_nmap, obj_lightman.normal_surface)
-		texture_set_stage(global.light_u_mask, surface_get_texture(obj_lightman.mask_surface))
+		texture_set_stage(global.light_u_mask, shadows ? mask_tex : blank_tex)
 		//draw_rectangle_color(_vx, _vy, _vx+game_width, _vy+game_height, color, color, color, color, 0) //canvas for drawing the light
 		draw_surface_ext(obj_lightman.light_surface, _vx, _vy, 1, 1, 0, c_white, 1)
 	
 		z --
 	}
-	l = obj_locallight
+	//l = obj_locallight
 }
 gpu_set_ztestenable(false)
 gpu_set_zwriteenable(false)

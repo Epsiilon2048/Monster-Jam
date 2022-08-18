@@ -1,7 +1,7 @@
 
 function catstate_mon_slash_initialize(){ with obj_cat {
 
-sprite_index = spr_monster_slash
+sprite_index = morgan ? spr_morgster_slash : spr_monster_slash
 image_index = 0
 play_sound_for_player(player.player_id, snd_monster_slash, 2, false)
 

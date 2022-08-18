@@ -42,7 +42,7 @@ with obj_robo {
 	Quad(_vb, bbox_left+1, bbox_bottom+1-3, bbox_right, bbox_bottom+1) //Negative Slope Diagonal Wall
 	Quad(_vb, bbox_left+1, bbox_bottom+1, bbox_right, bbox_bottom+1-3) //Positive Slope Diagonal Wall
 }
-with obj_cat {
+if not obj_local.local_is_cat with obj_cat {
 	if final_form > 0
 	{
 		Quad(_vb, bbox_left-3, bbox_bottom+1, bbox_right+2, bbox_bottom+1)
@@ -57,6 +57,18 @@ with obj_cat {
 	}
 }
 with obj_scanner {
+	Quad(_vb, bbox_left, bbox_top, bbox_right, bbox_bottom+1) //Negative Slope Diagonal Wall
+	Quad(_vb, bbox_left, bbox_bottom+1, bbox_right, bbox_top) //Positive Slope Diagonal Wall
+}
+with obj_tree {
+	Quad(_vb, bbox_left, bbox_top, bbox_right, bbox_bottom+1) //Negative Slope Diagonal Wall
+	Quad(_vb, bbox_left, bbox_bottom+1, bbox_right, bbox_top) //Positive Slope Diagonal Wall
+}
+//with obj_flower {
+//	Quad(_vb, bbox_left, bbox_top, bbox_right, bbox_bottom+1) //Negative Slope Diagonal Wall
+//	Quad(_vb, bbox_left, bbox_bottom+1, bbox_right, bbox_top) //Positive Slope Diagonal Wall
+//}
+with obj_bigtree {
 	Quad(_vb, bbox_left, bbox_top, bbox_right, bbox_bottom+1) //Negative Slope Diagonal Wall
 	Quad(_vb, bbox_left, bbox_bottom+1, bbox_right, bbox_top) //Positive Slope Diagonal Wall
 }

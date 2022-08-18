@@ -74,6 +74,6 @@
   "nineSlice": null,
   "parent": {
     "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "path": "folders/Cat/Sprites.yy",
   },
 }
