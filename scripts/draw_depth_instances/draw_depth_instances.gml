@@ -24,6 +24,10 @@ global.mask_u_y = shader_get_uniform(shd_mask, "u_y")
 global.mask_u_emission_color = shader_get_uniform(shd_mask, "u_emission_color")
 global.mask_u_emission_add = shader_get_uniform(shd_mask, "u_emission_add")
 global.mask_u_texel = shader_get_uniform(shd_mask, "u_texel")
+global.mask_u_sprite_height = shader_get_uniform(shd_mask, "u_sprite_height")
+global.mask_u_liproj_u = shader_get_uniform(shd_mask, "u_liproj_u")
+global.mask_u_base_u = shader_get_uniform(shd_mask, "u_base_u")
+global.mask_u_liproj = shader_get_sampler_index(shd_mask, "u_liproj")
 
 function mask_before_script(){
 
@@ -32,11 +36,18 @@ var local = (object_index == obj_robo or object_index == obj_cat) and instance_e
 var e = emission + (local ? 0.2 : 0)
 var c = emission_color
 
-shader_set_uniform_f(global.mask_u_y, (y-cam_y)/game_height)
+shader_set_uniform_f(global.mask_u_y, (y-sprite_yoffset+sprite_height-cam_y)/game_height)
 shader_set_uniform_f(global.mask_u_emission_color, color_get_red(c)/255, color_get_green(c)/255, color_get_blue(c)/255, 1)
 shader_set_uniform_f(global.mask_u_emission_add, e)
+shader_set_uniform_f(global.mask_u_sprite_height, sprite_height)
+
+var tex = surface_get_texture(liproj_surface)
+var uv = texture_get_uvs(tex)
+shader_set_uniform_f(global.mask_u_liproj_u, uv[0]+uv[6])
+texture_set_stage(global.mask_u_liproj, tex)
 
 var tex = sprite_get_texture(sprite_index, image_index)
+shader_set_uniform_f(global.mask_u_base_u, texture_get_uvs(tex)[0])
 shader_set_uniform_f(global.mask_u_texel, texture_get_texel_width(tex), texture_get_texel_height(tex))
 }
 

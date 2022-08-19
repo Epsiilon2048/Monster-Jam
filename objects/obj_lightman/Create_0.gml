@@ -64,6 +64,7 @@ draw_mask_surface = false
 
 depth_list = ds_grid_create(2, 1)
 depth_objects = [
+	obj_depth_instance_test,
 	obj_robo,
 	obj_cat,
 	obj_scanner,
