@@ -14,29 +14,22 @@ if position_meeting(obj_menuinfo.input.mx, obj_menuinfo.input.my, self)
 		// Do thing
 		clicking = false
 		state = 1
-		if image_alpha > 0.5
+		if image_alpha > 0.2
 		{
-			if instance_number(obj_player) <= 1 and obj_menuinfo.cat_player != 0
+			var cat_exists = false
+			with obj_player
 			{
-				
+				if obj_menuinfo.cat_player == player_id
+				{
+					cat_exists = true
+					break
+				}
 			}
-			else
-			{
-				var cat_exists = false
-				with obj_player
-				{
-					if obj_menuinfo.cat_player == player_id
-					{
-						cat_exists = true
-						break
-					}
-				}
 			
-				if not cat_exists or obj_menuinfo.cat_player == -1
-				{
-					obj_menuinfo.cat_player = global.prev_cat mod instance_number(obj_player)
-					global.prev_cat ++
-				}
+			if not cat_exists or obj_menuinfo.cat_player == -1
+			{
+				obj_menuinfo.cat_player = global.prev_cat mod instance_number(obj_player)
+				global.prev_cat ++
 			}
 			
 			create_player_characters()

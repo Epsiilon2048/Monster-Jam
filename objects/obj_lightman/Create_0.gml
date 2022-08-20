@@ -18,7 +18,8 @@ light_surface = -1
 mask_surface = -1
 depth_surface = -1
 blank_surface = -1
-
+buffer_surface = -1
+buffer_surface2 = -1
 
 function BGbegin(){
 	gpu_set_colorwriteenable(1, 1, 1, 0)
@@ -35,7 +36,6 @@ layer_script_end(_bg_layer2, BGend)
 
 
 // Normal layer functions
-buffer_surface = -1
 global.vx = 0
 global.vy = 0
 

@@ -2,7 +2,7 @@
 function draw_catvision_notice(){
 
 static xx = 6
-static yy = game_height-10
+static yy = game_height-15
 static under_yy = 12
 
 draw_set_color(monster_red)

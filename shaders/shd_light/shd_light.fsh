@@ -14,9 +14,6 @@ uniform float u_game_height;
 uniform sampler2D u_mask;
 
 uniform float reflection;
-uniform float diffusion;
-//uniform float step_dist;
-//uniform float steps;
 
 #define PI 3.1415926538
 
@@ -35,7 +32,7 @@ void main(){
 		float rad = atan(-dis.y,dis.x);	
 		float adis = abs(mod(rad+2.0*PI,2.0*PI) - dir);
 		adis = min(adis, 2.0*PI - adis);
-		str *= clamp((1.0-adis/hfov)*diffusion,0.0,1.0);
+		str *= clamp((1.0-adis/hfov)*100000000.0,0.0,1.0);
 	}
 		
 	if (mask.a > 0.0 && mask.y > u_pos.y/u_game_height)

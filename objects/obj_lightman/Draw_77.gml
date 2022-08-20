@@ -2,14 +2,32 @@
 var scalex = win_width/game_width
 var scaley = win_height/game_height
 
-var read_surface = application_surface
+var se = surface_exists
+var sc = surface_create
+if !se(buffer_surface)	buffer_surface	= sc(game_width, game_height)
+if !se(buffer_surface2)	buffer_surface2	= sc(game_width, game_height)
+
+var read_surface = buffer_surface2
 var write_surface = buffer_surface
 var s
+
+if instance_exists(o_stage)
+{
+	draw_surface(application_surface, 0, 0)
+	exit
+}
+
+surface_set_target(read_surface)
+draw_surface_stretched(application_surface, 0, 0, game_width, game_height)
+surface_reset_target()
 
 surface_set_target(write_surface)
 var tex = surface_get_texture(write_surface)
 shader_set(shd_lightmix)
 shauni("u_ambient_intensity", obj_lightset.ambient_intensity+obj_local.local_is_cat*obj_lightset.cat_ambient)
+shauni("u_light_mult", obj_lightset.light_mult)
+shauni("u_vertical_pow", obj_lightset.vertical_pow)
+shauni("u_vertical_factor", obj_lightset.vertical_factor)
 shauni_surface("u_light", light_surface)
 shauni_surface("u_mask", mask_surface)
 shauni("u_texel", texture_get_texel_width(tex), texture_get_texel_height(tex))
@@ -21,10 +39,11 @@ s = read_surface
 read_surface = write_surface
 write_surface = s
 
-//if obj_local.local_is_cat
+if obj_local.local_is_cat
 {
 	surface_set_target(write_surface)
 	shader_set(shd_kitty)
+	shauni_color("u_vignette_color", c_black, , true)
 	draw_surface(read_surface, 0, 0)
 	shader_reset()
 	surface_reset_target()

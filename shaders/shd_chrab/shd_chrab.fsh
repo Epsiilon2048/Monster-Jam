@@ -10,7 +10,8 @@ uniform float u_cam_y;
 
 void main()
 {
-	float wave = sin(u_wave_time + (u_cam_y*u_texel.y + v_vTexcoord.y)*100.0)*3.0*u_texel.x*u_wave_intensity;
+	float wavemult = 3.0*u_texel.x*u_wave_intensity;
+	float wave = sin(u_wave_time + (u_cam_y*u_texel.y + v_vTexcoord.y)*100.0)*wavemult;
 	
 	vec2 width = vec2(u_texel.x*u_dist, 0.0);
 	

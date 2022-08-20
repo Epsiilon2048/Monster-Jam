@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMFont",
+  "resourceVersion": "1.0",
+  "name": "fnt_debug1x",
   "hinting": 0,
   "glyphOperations": 0,
   "interpreter": 0,
@@ -132,8 +135,4 @@
     "name": "Fonts",
     "path": "folders/Console/Internal workings (extremely spooky)/(what a brave soul you are)/Fonts.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "fnt_debug1x",
-  "tags": [],
-  "resourceType": "GMFont",
 }

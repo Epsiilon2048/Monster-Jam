@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMObject",
+  "resourceVersion": "1.0",
+  "name": "obj_lightblock",
   "spriteId": {
     "name": "spr_lightblock",
     "path": "sprites/spr_lightblock/spr_lightblock.yy",
@@ -28,8 +31,4 @@
     "name": "Visuals",
     "path": "folders/Visuals.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "obj_lightblock",
-  "tags": [],
-  "resourceType": "GMObject",
 }

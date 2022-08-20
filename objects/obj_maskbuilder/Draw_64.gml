@@ -43,11 +43,11 @@ draw_rectangle(cx, cy, cx+scale, cy+scale, true)
 var px = clamp((cx-surf_x)/scale, 0, width-1)
 if mouse_check_button(mb_left)
 {
-	var py = clamp(cy-surf_y, 0, height*scale)/(height*scale)
+	var py = 1-clamp(cy-surf_y, 0, height*scale)/(height*scale)
 	array[px] = py
 	
 	surface_set_target(surface)	
-	draw_point_color(px, 0, merge_color(0x00FF00, c_black, py))
+	draw_point_color(px, 0, merge_color(c_black, 0x00FF00, py))
 	surface_reset_target()
 }
 else if mouse_check_button(mb_right)
@@ -68,7 +68,7 @@ for(var i = 0; i <= width-1; i++)
 	if array[i] >= 0 
 	{
 		var xx = surf_x+i*scale
-		var yy = surf_y+floor(array[i]*height)*scale
+		var yy = surf_y+floor((1-array[i])*height)*scale
 		draw_rectangle(xx, yy, xx+scale, yy+scale, false)
 	}
 }

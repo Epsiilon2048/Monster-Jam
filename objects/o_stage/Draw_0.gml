@@ -1,13 +1,13 @@
 
 if not surface_exists(surface)
 {
-	surface = surface_create(stage.cam_w, stage.cam_h)	
+	surface = surface_create(stage.cam_w*scale, stage.cam_h*scale)	
 }
 
-if	surface_get_width (surface) != stage.cam_w or 
-	surface_get_height(surface) != stage.cam_h
+if	surface_get_width(surface) != stage.cam_w*scale or 
+	surface_get_height(surface) != stage.cam_h*scale
 {
-	surface_resize(surface, stage.cam_w, stage.cam_h)
+	surface_resize(surface, stage.cam_w*scale, stage.cam_h*scale)
 }
 
 in_bounds = true
@@ -68,7 +68,7 @@ if true
 		var alpha = this.alpha * variable_struct_exists_get(stage.groups, this.group, 1)
 		
 		var pass = false
-		repeat 2
+		repeat 1
 		{
 			//if pass
 			//{
@@ -78,7 +78,7 @@ if true
 			//	surface_set_target(depth_map)
 			//}
 			
-			if alpha >= 1 draw_sprite_tiled(this.sprite, this.subimg, this.x, this.y)
+			if alpha >= 1 draw_sprite_tiled_ext(this.sprite, this.subimg, this.x, this.y, scale, scale, c_white, 1)
 			else draw_sprite_ext(this.sprite, this.subimg, this.x, this.y, 1, 1, 0, c_white, alpha)
 			
 			pass = false
@@ -107,7 +107,7 @@ draw_surface_ext(
 	surface,
 	clamp(cam_x, x, x+stage.width-stage.cam_w),
 	clamp(cam_y, y, y+stage.height-stage.cam_h),
-	1/1, 1/1, 0,
+	1/scale, 1/scale, 0,
 	stage.color, 1
 )
 if shader_current() != -1 shader_reset()

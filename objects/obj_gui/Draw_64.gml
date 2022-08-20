@@ -3,6 +3,9 @@ step ++
 
 if not instance_exists(obj_local) exit
 
+var sc = gui_width/game_width
+matrix_set(matrix_world, matrix_build(0, 0, 0, 0, 0, 0, sc, sc, 1))
+
 if instance_exists(o_stage)
 {
 	if rollback_game_running stage_screen = merge_color(stage_screen, c_gray, .01)
@@ -27,7 +30,8 @@ with obj_reset
 
 draw_whos_the_cat()
 
-if not instance_exists(obj_local.local_player) or not instance_exists(obj_local.local_player.object)
+var started = instance_exists(obj_local.local_player) and instance_exists(obj_local.local_player.object)
+if not started
 {
 	with obj_playersinbutton
 	{
@@ -47,7 +51,9 @@ if not instance_exists(obj_local.local_player) or not instance_exists(obj_local.
 		//}
 	}
 }
-else
+
+matrix_set(matrix_world, matrix_build(0, 0, 0, 0, 0, 0, 1, 1, 1))
+if started
 {
 	if not surface_exists(gui_surface)
 	{
@@ -130,5 +136,5 @@ else
 
 	surface_reset_target()
 
-	draw_surface(gui_surface, 0, 0)
+	draw_surface_stretched(gui_surface, 0, 0, gui_width, gui_height)
 }

@@ -58,7 +58,7 @@
     "backdropXOffset": 0.0,
     "backdropYOffset": 0.0,
     "xorigin": 6,
-    "yorigin": 14,
+    "yorigin": 13,
     "eventToFunction": {},
     "eventStubScript": null,
   },

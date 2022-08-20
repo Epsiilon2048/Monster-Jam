@@ -5,4 +5,4 @@ z = 0
 
 use_liproj = true
 sprite_index = obj_maskbuilder.sprite
-liproj_surface = obj_maskbuilder.surface
+liproj_array = obj_maskbuilder.array

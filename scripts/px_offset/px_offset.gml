@@ -22,8 +22,8 @@ return {
 }
 }
 
-var px = calc(stage_x, stage_w, stage_ox, cx, cw)
-var py = calc(stage_y, stage_h, stage_oy, cy, ch)
+var px = calc(stage_x, stage_w*scale, stage_ox*scale, cx*scale, cw*scale)
+var py = calc(stage_y, stage_h*scale, stage_oy*scale, cy*scale, ch*scale)
 
 global.px_cam_x = cx
 global.px_cam_y = cy
@@ -47,5 +47,5 @@ return
 	+ sprite_p					// Correct for sprite position
 	+ cam_o						// Offset to camera position
 	
-)	//*scale					// Scale everything
+)	*scale					// Scale everything
 }

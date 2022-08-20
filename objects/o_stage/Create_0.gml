@@ -23,3 +23,5 @@ _mx = 0
 _my = 0
 _cam_x = 0
 _cam_y = 0
+
+scale = 1
