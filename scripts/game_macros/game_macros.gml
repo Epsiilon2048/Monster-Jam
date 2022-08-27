@@ -19,4 +19,13 @@
 
 #macro fnt_small global.smallfont
 
+enum windex
+{
+	neutral,
+	e, ee,
+	w, ww,
+	s, ss,
+	n, nn
+}
+
 global.prev_cat = 1

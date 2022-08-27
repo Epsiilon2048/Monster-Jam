@@ -9,8 +9,5 @@ view_set_hport(0, height)
 window_width_prev = width
 window_height_prev = height
 
-with o_stage
-{
-	scale = width/game_width
-}
+o_stage.scale = round(width/game_width)
 }
