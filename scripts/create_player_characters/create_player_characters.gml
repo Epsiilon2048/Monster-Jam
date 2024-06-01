@@ -36,8 +36,8 @@ else
 {
 	object = instance_create_layer(0, 0, "Instances", obj_robo, {
 		player: id,
-		colorname: "bumblebee",
-		EMISSION_COLOR: global.namecolors[$ "bumblebee"],
+		colorname: "indigo",
+		EMISSION_COLOR: global.namecolors[$ "indigo"],
 	})
 	
 	instance_create_layer(0, 0, "Instances", obj_flashlight, {parent: object})

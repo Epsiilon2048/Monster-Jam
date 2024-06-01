@@ -2,9 +2,8 @@
   "resourceType": "GMAnimCurve",
   "resourceVersion": "1.2",
   "name": "ac_gui",
-  "function": 2,
   "channels": [
-    {"resourceType":"GMAnimCurveChannel","resourceVersion":"1.0","name":"circle_intro","colour":4290799884,"visible":true,"points":[
+    {"resourceType":"GMAnimCurveChannel","resourceVersion":"1.0","name":"circle_intro","colour":4290799884,"points":[
         {"th0":-0.1,"th1":0.057243764,"tv0":0.0,"tv1":0.13954027,"x":0.0,"y":0.0,},
         {"th0":-0.00421381,"th1":0.029770995,"tv0":0.0,"tv1":0.0,"x":0.059931934,"y":0.14,},
         {"th0":-0.029770995,"th1":0.0011442453,"tv0":0.0,"tv1":0.0,"x":0.23731245,"y":0.13990939,},
@@ -14,8 +13,9 @@
         {"th0":-0.085286856,"th1":0.07987768,"tv0":0.14391041,"tv1":-0.1347831,"x":0.7258065,"y":1.2155006,},
         {"th0":-0.039109528,"th1":0.04569894,"tv0":0.002206564,"tv1":-0.0025783058,"x":0.95430106,"y":1.0656412,},
         {"th0":-0.0058665276,"th1":0.1,"tv0":0.0563581,"tv1":0.0,"x":1.0,"y":1.0,},
-      ],},
+      ],"visible":true,},
   ],
+  "function": 2,
   "parent": {
     "name": "GUI",
     "path": "folders/GUI.yy",

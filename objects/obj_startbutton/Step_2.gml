@@ -28,8 +28,8 @@ if position_meeting(obj_menuinfo.input.mx, obj_menuinfo.input.my, self)
 			
 			if not cat_exists or obj_menuinfo.cat_player == -1
 			{
-				obj_menuinfo.cat_player = global.prev_cat mod instance_number(obj_player)
-				global.prev_cat ++
+				//obj_menuinfo.cat_player = global.prev_cat mod instance_number(obj_player)
+				//global.prev_cat ++
 			}
 			
 			create_player_characters()

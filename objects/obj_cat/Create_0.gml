@@ -1,5 +1,5 @@
 
-morgan = true
+morgan = false
 sprite_index = morgan ? spr_morgan : spr_cat 
 
 #macro CAT_EMISSION_COLOR 0x4437E1

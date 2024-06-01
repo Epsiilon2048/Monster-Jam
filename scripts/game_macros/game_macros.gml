@@ -15,7 +15,7 @@
 
 #macro start_in_rollback true
 #macro rollback_testing false
-#macro rollback_one_player false
+#macro rollback_one_player true
 
 #macro fnt_small global.smallfont
 

@@ -28,7 +28,7 @@ with obj_player
 	
 	if mouse_on_button and obj_menuinfo.input.action_pressed
 	{
-		obj_menuinfo.cat_player = player_id
+		//obj_menuinfo.cat_player = player_id
 		obj_whos_the_cat.is_random = false
 	}
 }
